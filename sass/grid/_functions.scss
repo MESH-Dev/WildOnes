@@ -10,9 +10,9 @@
 
 // to determine the unit. If it's a percentage, then our equation changes.
 // number em ( number $px, [ number $base: $base-font-size ] )
-// @function em($px, $base: $base-font-size) {
-// 	@return _calcRU($px, $base, "em");
-// }
+@function em($px, $base: $base-font-size) {
+	@return _calcRU($px, $base, "em");
+}
 
 // number rem ( number $px, [ number $base: $base-font-size ] )
 @function rem($px, $base: $base-font-size) {

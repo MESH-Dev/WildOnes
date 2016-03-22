@@ -1,0 +1,55 @@
+.content-half {
+  width: 50%;
+  float: left;
+  height: 400px;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  position: relative;
+  padding: 30px;
+
+
+  -webkit-transition: all .1s ease-in-out;
+  -moz-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+
+  @include mq($desktop-width, $max) {
+    width: 100%;
+  }
+
+  .content-text {
+    font-size: em(36);
+    line-height: 1.1em;
+    font-family: $font-family--secondary;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0 15%;
+  }
+}
+
+.content-third {
+  width: 33.333%;
+  float: left;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 40px;
+
+  @include mq($tablet-width, "max-width") {
+    width: 100%;
+  }
+}
+
+.content-fourth {
+    width: 25%;
+    float: left;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    @include mq($tablet-width, "max-width") {
+      width: 100%;
+    }
+}

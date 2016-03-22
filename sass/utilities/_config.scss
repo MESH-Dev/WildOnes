@@ -7,26 +7,18 @@
 // Color Scheme
 // examples based on the official Sass styleguide
 // =============
-
-// Descriptive colors:
-$red                          : red;
-$green                        : green;
-$blue                         : blue;
-$gray                         : #666;
+ 
 
 // Main color palette
-$color-primary                : $red;
-$color-secondary              : $green;
-$color-accent                 : $blue;
-$color-shadow                 : rgba($blue, .125);
-$color-note                   : $gray;
+$white		:  #ffffff;
+$black		:  #000000;
+$orange     :  #fcb040;
+$blue 		:  #74c4d6;
 
-$color-font                   : $green;
 
-// Links
-$color-link                   : $color-primary;
-$color-link-hover             : $blue;
-$color-link-visited           : $green;
+
+ 
+
 
 
 
@@ -41,18 +33,20 @@ $trns-duration                 : 1;
 
 // Font Stacks
 
-$font-url--google        : 'http://fonts.googleapis.com/css?family=Lora:100,300,400,700,900';
-$font-family--primary    : 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-family--secondary  : 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ 
+$font-family--primary    : "futura-pt",sans-serif;;
+$font-family--secondary  : 'akularegular';
 
 
 // Font Weights
 
-$font-weight--thin       : 100;
-$font-weight--light      : 300;
-$font-weight--medium     : 400;
-$font-weight--bold       : 700;
-$font-weight--ultra-bold : 900;
+// Book	"futura-pt"	400	normal	
+// Medium	"futura-pt"	500	normal	
+// Heavy	"futura-pt"	700	normal	
+// Extra Bold	"futura-pt"	800	normal	
+ 
+ 
+
 
 // Path to Assets
 // ==============

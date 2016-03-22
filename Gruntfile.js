@@ -7,7 +7,8 @@ module.exports = function (grunt) {
             options: {
               sassDir : 'sass/',
               cssDir: './',
-              environment: 'development'
+              environment: 'development',
+              sourcemap: true
             }
           }
         },

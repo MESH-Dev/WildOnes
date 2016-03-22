@@ -1,9 +1,151 @@
 // ==========================================================================
 // Base Styles
 // ==========================================================================
+.home-panel{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: calc(100vh);
+    display: table;
+    width: 100%;
+    top: 0px;
+ 
 
-.callout {
-  text-align: center;
-  display: block;
-  width: 100%;
+    margin-bottom: 30px;
+
+
+
+    .home-logo{
+		 margin: calc(15vh) 0 0 0;
+    }
+    .home-play-btn{
+		 margin: 10px 0 0 0;
+    }
+    .home-callout{
+    	margin: 100px 0 0 0;
+
+    	a:hover{
+    		opacity: 0.7
+    	}
+    }
 }
+
+.slider-panel{
+
+}
+
+
+
+
+
+
+ 
+//demo css  ----------------
+
+
+.carousel-control.left {
+	background-image: url("img/arrow-left.png");
+	background-repeat: no-repeat;
+}
+
+.carousel-control.right{
+	background-image: url("img/arrow-right.png");
+	background-repeat: no-repeat;
+}
+
+.sr-only{display: none;}
+ 
+.carousel .item {
+	min-height: 350px;
+	height:  100vh;
+	width:100%; 
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.carousel-caption{
+	width: 600px;
+	margin: 0 auto;
+	position: absolute;
+ 
+	top: 35vh;
+	z-index: 10;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #fff;
+	text-align: center;
+ 
+
+	h4{
+		margin:0;
+		font-size: em(20);
+		line-height: em(20);
+		font-weight: 500;
+		letter-spacing: 0.1em;
+		padding: 0 0 20px 0;
+	}
+
+	hr{
+   	 	width: 300px;
+    	border-bottom: 1px solid $white;
+    
+	}
+	p{
+		 
+	}
+
+	h2{
+		margin: 0;
+		font-family: $font-family--secondary;
+		font-size: 32px; 
+		letter-spacing: 0.7em;
+		padding: 0 0 15px 0;
+	}
+ 
+	button {
+		border: 1px solid $black;
+		font-size: 20px;
+		font-weight: 700;
+		letter-spacing: .1em;
+		text-transform: uppercase;
+		padding: 10px;
+		margin-top: 0px; 
+		color: white;
+		background-color:rgba(255,255,255,0.2);
+
+		&:hover{
+			color: white;
+			background-color:rgba(0,0,0,0.2);
+		}
+
+	}
+
+	/* Animation delays */
+	/* Animation delays */
+	h4{
+		-webkit-animation-delay: .5s;
+		animation-delay: .5s;
+	}
+	hr {
+		-webkit-animation-delay: .5s;
+		animation-delay: .5s;
+	}
+	h2 {
+		-webkit-animation-delay: 1.5s;
+		animation-delay: 1.5s;
+	}
+	p{
+		-webkit-animation-delay: 1.75s;
+		animation-delay: 1.75s;
+	}
+	button {
+		-webkit-animation-delay: 2s;
+		animation-delay: 2s;
+	}
+
+}
+ 
+ 
+

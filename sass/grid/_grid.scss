@@ -14,7 +14,7 @@
 		&.omega { margin-right: 0; }
 	}
 }
-.row { margin-bottom: relative(20px); }
+.row { margin-bottom: 0; }
 
 // Set variables in user global config in skeleton sass root instead of editing directly
 @include grid($base-width, $is-fluid, $base-gutter-width, $base-col-count);
