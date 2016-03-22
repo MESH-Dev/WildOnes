@@ -2,7 +2,7 @@
 
 //enqueue scripts and styles *use production assets. Dev assets are located in  /css and /js
 function loadup_scripts() {
-	
+
     wp_enqueue_script( 'theme-js', get_template_directory_uri().'/js/mesh.js', array('jquery'), '1.0.0', true );
     //wp_enqueue_script( 'smoothdivscroll-js', get_template_directory_uri().'/js/smoothdivscroll.js', array('jquery'), '1.0.0', true );
 }
@@ -17,7 +17,6 @@ add_image_size('large', 700, '', true); // Large Thumbnail
 add_image_size('medium', 250, '', true); // Medium Thumbnail
 add_image_size('small', 120, '', true); // Small Thumbnail
 add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
-
 
 
 //Register WP Menus

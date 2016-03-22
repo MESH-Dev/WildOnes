@@ -1,5 +1,5 @@
 <?php /*
-* Template Name: Homepage 
+* Template Name: Homepage
 */
 get_header(); ?>
 
@@ -7,20 +7,24 @@ get_header(); ?>
 
     <!-- /////////HOME PANEL////////////// -->
     <div class="home-panel" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/home-bg.jpg');">
-    
+
         <div class="container">
             <div class="row">
                 <div class="twelve columns home-logo center">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="The WildOnes" />
                 </div>
                 <div class="twelve columns home-play-btn center">
-                    <a id="home-play-btn" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/play-btn.png" alt="The WildOnes" /></a>
+                    <div id="home-play-btn"><img src="<?php echo get_template_directory_uri(); ?>/img/play-btn.png" alt="The WildOnes" /></div>
                 </div>
                 <div class="twelve columns home-callout center">
                     <h3><a href="#">Adventures on the Gorge</a></h3>
                 </div>
             </div>
-        </div>        
+        </div>
+    </div>
+
+    <div class="vimeo">
+      <iframe src="https://player.vimeo.com/video/101111912" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </div>
 
 
@@ -36,7 +40,7 @@ get_header(); ?>
                 <h4 data-animation="animated fadeInDown">
                   I never realized that there was a place where people lived that wasn’t so much about what you had; everyone’s living in tents, hanging out together and being communal and really enjoying living everyday.
                 </h4>
-                <hr data-animation="animated zoomInUp"> 
+                <hr data-animation="animated zoomInUp">
                 <h2 data-animation="animated flipInY">
                   Bongo
                 </h2>
@@ -51,7 +55,7 @@ get_header(); ?>
                 <h4 data-animation="animated fadeInDown">
                   I never realized that there was a place where people lived that wasn’t so much about what you had; everyone’s living in tents, hanging out together and being communal and really enjoying living everyday.
                 </h4>
-                <hr data-animation="animated zoomInUp"> 
+                <hr data-animation="animated zoomInUp">
                 <h2 data-animation="animated flipInY">
                   Bongo
                 </h2>
@@ -66,7 +70,7 @@ get_header(); ?>
                 <h4 data-animation="animated fadeInDown">
                   I never realized that there was a place where people lived that wasn’t so much about what you had; everyone’s living in tents, hanging out together and being communal and really enjoying living everyday.
                 </h4>
-                <hr data-animation="animated zoomInUp"> 
+                <hr data-animation="animated zoomInUp">
                 <h2 data-animation="animated flipInY">
                   Bongo
                 </h2>
@@ -81,7 +85,7 @@ get_header(); ?>
                 <h4 data-animation="animated fadeInDown">
                   I never realized that there was a place where people lived that wasn’t so much about what you had; everyone’s living in tents, hanging out together and being communal and really enjoying living everyday.
                 </h4>
-                <hr data-animation="animated zoomInUp"> 
+                <hr data-animation="animated zoomInUp">
                 <h2 data-animation="animated flipInY">
                   Bongo
                 </h2>
@@ -143,32 +147,32 @@ get_header(); ?>
                 <div class="eight columns offset-by-two ">
                     <form class="left-offset">
                         <fieldset>
- 
+
                         <legend>Email Sign Up</legend>
- 
+
                         <div class="form-group">
-                            <label for="First Name">First Name</label>  
+                            <label for="First Name">First Name</label>
                             <div class="three columns ">
                                 <input id="FirstName" name="First Name" type="text" placeholder="First Name"  class="" >
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="Last Name">Last Name</label>  
+                            <label for="Last Name">Last Name</label>
                             <div class="three columns">
                                 <input id="LastName" name="Last Name" type="text" placeholder="Last Name" class=" ">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="Zip Code">Zip Code</label>  
+                            <label for="Zip Code">Zip Code</label>
                             <div class="two columns ">
                                 <input id="ZipCode" name="Zip Code" type="text" placeholder="Zip Code" class=" ">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="Email">Email</label>  
+                            <label for="Email">Email</label>
                             <div class="eight columns ">
                                 <input id="Email" name="Email" type="text" placeholder="Email" class="email">
                             </div>
@@ -189,14 +193,14 @@ get_header(); ?>
 
         <div class="social-text">
             <div class="left">
-                 Follow us on <a href="#">facebook</a>, <a href="#">twitter</a>, & <a href="#">instagram</a> for chances to win whitewater rafting adventures, zip line trips and more. 
+                 Follow us on <a href="#">facebook</a>, <a href="#">twitter</a>, & <a href="#">instagram</a> for chances to win whitewater rafting adventures, zip line trips and more.
             </div>
             <div class="right">
                 Read the <a href="#">sweepstakes rules.</a>
             </div>
 
         </div>
-        
+
     </div>
 
 
@@ -224,10 +228,10 @@ get_header(); ?>
         </a> -->
 
     <div class="footer-parrallax" data-parallax="scroll" data-image-src="<?php echo get_template_directory_uri(); ?>/img/group.jpg">
-        
+
     </div>
 
- 
+
 </main><!-- #main -->
 
 <?php get_footer(); ?>

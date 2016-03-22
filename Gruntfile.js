@@ -8,7 +8,7 @@ module.exports = function (grunt) {
               sassDir : 'sass/',
               cssDir: './',
               environment: 'development',
-              sourcemap: true
+              sourcemap: false
             }
           }
         },
@@ -60,7 +60,6 @@ module.exports = function (grunt) {
 
     });
     // load tasks from node_modules
-    grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
