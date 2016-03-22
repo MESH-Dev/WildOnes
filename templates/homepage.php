@@ -11,10 +11,10 @@ get_header(); ?>
         <div class="container">
             <div class="row">
                 <div class="twelve columns home-logo center">
-                    <img src="http://localhost/wildones/wp-content/themes/wildones/img/logo.png" alt="The WildOnes" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="The WildOnes" />
                 </div>
                 <div class="twelve columns home-play-btn center">
-                    <a id="home-play-btn" href="#"><img src="http://localhost/wildones/wp-content/themes/wildones/img/play-btn.png" alt="The WildOnes" /></a>
+                    <a id="home-play-btn" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/play-btn.png" alt="The WildOnes" /></a>
                 </div>
                 <div class="twelve columns home-callout center">
                     <h3><a href="#">Adventures on the Gorge</a></h3>
@@ -107,7 +107,139 @@ get_header(); ?>
     </div><!-- /.carousel -->
 
 
-    <!-- /////////THREE IMG PANEL////////////// -->
+    <!-- /////////FOUR IMG PANEL////////////// -->
+    <div class="four-imgs">
+        <div class="container">
+            <div class="row">
+                <div class="four columns offset-by-four">
+                    <h2 class="akula">How Wild Are You?</h2>
+                </div>
+                <div class="eight columns offset-by-two">
+                    <p>Enter to win a 3-day all-inclusive West Virginia adventure vacation for four people, plus gear, beer, and shirts on your backs. </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="three columns"><img src="<?php echo get_template_directory_uri(); ?>/img/zipline.png" alt=""></div>
+                <div class="three columns"><img src="<?php echo get_template_directory_uri(); ?>/img/zipline.png" alt=""></div>
+                <div class="three columns"><img src="<?php echo get_template_directory_uri(); ?>/img/zipline.png" alt=""></div>
+                <div class="three columns"><img src="<?php echo get_template_directory_uri(); ?>/img/zipline.png" alt=""></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- /////////EMAIL SIGN UP////////////// -->
+    <div class="email-signup">
+        <div class="container">
+            <div class="row">
+                <div class="four columns offset-by-four">
+                    <h2 class="akula">Play Wild.</h2>
+                </div>
+
+            </div>
+
+             <div class="row">
+                <div class="eight columns offset-by-two ">
+                    <form class="left-offset">
+                        <fieldset>
+ 
+                        <legend>Email Sign Up</legend>
+ 
+                        <div class="form-group">
+                            <label for="First Name">First Name</label>  
+                            <div class="three columns ">
+                                <input id="FirstName" name="First Name" type="text" placeholder="First Name"  class="" >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Last Name">Last Name</label>  
+                            <div class="three columns">
+                                <input id="LastName" name="Last Name" type="text" placeholder="Last Name" class=" ">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Zip Code">Zip Code</label>  
+                            <div class="two columns ">
+                                <input id="ZipCode" name="Zip Code" type="text" placeholder="Zip Code" class=" ">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Email">Email</label>  
+                            <div class="eight columns ">
+                                <input id="Email" name="Email" type="text" placeholder="Email" class="email">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sumit">Submit</label>
+                            <div class="eight columns ">
+                                <button id="sumit" name="sumit" class="submit">Sieze the Moment</button>
+                            </div>
+                        </div>
+
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div> <!-- .container -->
+
+        <div class="social-text">
+            <div class="left">
+                 Follow us on <a href="#">facebook</a>, <a href="#">twitter</a>, & <a href="#">instagram</a> for chances to win whitewater rafting adventures, zip line trips and more. 
+            </div>
+            <div class="right">
+                Read the <a href="#">sweepstakes rules.</a>
+            </div>
+
+        </div>
+        
+    </div>
+
+
+    <!-- /////////CAROUSEL PANEL////////////// -->
+    <div id="bottom-carousel" class="carousel slide" data-ride="carousel">
+
+      <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+
+           
+            <div class="item active">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
+            </div> 
+            <div class="item ">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
+            </div> 
+             <div class="item ">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
+            </div> 
+             <div class="item ">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
+            </div> 
+             <div class="item ">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
+            </div> 
+ 
+
+        </div><!-- /.carousel-inner -->
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#bottom-carousel"
+             role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#bottom-carousel"
+             role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+    </div><!-- /.carousel -->
+
 
 
 
