@@ -39,4 +39,9 @@ jQuery(document).ready(function($){
         doAnimations($animatingElems);
     });
 
+
+    $("#bottom-carousel").smoothDivScroll({
+
+    });
+
 });
