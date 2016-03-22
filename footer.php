@@ -19,8 +19,8 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<script src="http://localhost/wildones/wp-content/themes/wildones/js/smoothdivscroll.js"></script>
-<script src="http://localhost/wildones/wp-content/themes/wildones/js/mousewheel.min.js"></script>
+<script src="https://atog-meshdesign.c9users.io//wp-content/themes/wildones/js/smoothdivscroll.js"></script>
+<script src="https://atog-meshdesign.c9users.io//wp-content/themes/wildones/js/mousewheel.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/parrallax.min.js"></script>
 
 </body>

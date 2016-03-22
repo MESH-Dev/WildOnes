@@ -6,7 +6,7 @@ get_header(); ?>
 <main id="main" class="site-main" role="main">
 
     <!-- /////////HOME PANEL////////////// -->
-    <div class="home-panel" style="background-image: url('http://localhost/wildones/wp-content/themes/wildones/img/home-bg.jpg');">
+    <div class="home-panel" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/home-bg.jpg');">
     
         <div class="container">
             <div class="row">
@@ -31,7 +31,7 @@ get_header(); ?>
         <div class="carousel-inner" role="listbox">
 
             <!-- First slide -->
-            <div class="item active" style="background-image: url('http://localhost/wildones/wp-content/themes/wildones/img/bongo.jpg');">
+            <div class="item active" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/bongo.jpg');">
               <div class="carousel-caption">
                 <h4 data-animation="animated fadeInDown">
                   I never realized that there was a place where people lived that wasn’t so much about what you had; everyone’s living in tents, hanging out together and being communal and really enjoying living everyday.
@@ -46,7 +46,7 @@ get_header(); ?>
             </div><!-- /.item -->
 
             <!-- Second slide -->
-             <div class="item" style="background-image: url('http://localhost/wildones/wp-content/themes/wildones/img/bongo.jpg');">
+             <div class="item" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/bongo.jpg');">
               <div class="carousel-caption">
                 <h4 data-animation="animated fadeInDown">
                   I never realized that there was a place where people lived that wasn’t so much about what you had; everyone’s living in tents, hanging out together and being communal and really enjoying living everyday.
@@ -61,7 +61,7 @@ get_header(); ?>
             </div><!-- /.item -->
 
             <!-- Third slide -->
-            <div class="item" style="background-image: url('http://localhost/wildones/wp-content/themes/wildones/img/bongo.jpg');">
+            <div class="item" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/bongo.jpg');">
               <div class="carousel-caption">
                 <h4 data-animation="animated fadeInDown">
                   I never realized that there was a place where people lived that wasn’t so much about what you had; everyone’s living in tents, hanging out together and being communal and really enjoying living everyday.
@@ -76,7 +76,7 @@ get_header(); ?>
             </div><!-- /.item -->
 
             <!-- Fourth slide -->
-            <div class="item" style="background-image: url('http://localhost/wildones/wp-content/themes/wildones/img/bongo.jpg');">
+            <div class="item" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/bongo.jpg');">
               <div class="carousel-caption">
                 <h4 data-animation="animated fadeInDown">
                   I never realized that there was a place where people lived that wasn’t so much about what you had; everyone’s living in tents, hanging out together and being communal and really enjoying living everyday.
