@@ -4080,7 +4080,7 @@ footer p {
 
 /* line 85, sass/modules/_modules.scss */
 .carousel-caption {
-  width: 600px;
+  max-width: 600px;
   margin: 0 auto;
   position: absolute;
   top: 35vh;

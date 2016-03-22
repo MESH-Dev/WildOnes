@@ -41,65 +41,47 @@ get_header(); ?>
       <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
 
-            <!-- First slide -->
-            <div class="item active" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/bongo.jpg');">
-              <div class="carousel-caption">
-                <h4 data-animation="animated fadeInDown">
-                  I never realized that there was a place where people lived that wasn’t so much about what you had; everyone’s living in tents, hanging out together and being communal and really enjoying living everyday.
-                </h4>
-                <hr data-animation="animated zoomInUp">
-                <h2 data-animation="animated flipInY">
-                  Bongo
-                </h2>
-                <p  data-animation="animated rotateIn"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-cara.png" alt=""></p>
-                <button data-animation="animated flipInX">Watch Bongo In Action</button>
-              </div>
-            </div><!-- /.item -->
+          <?php
 
-            <!-- Second slide -->
-             <div class="item" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/bongo.jpg');">
-              <div class="carousel-caption">
-                <h4 data-animation="animated fadeInDown">
-                  I never realized that there was a place where people lived that wasn’t so much about what you had; everyone’s living in tents, hanging out together and being communal and really enjoying living everyday.
-                </h4>
-                <hr data-animation="animated zoomInUp">
-                <h2 data-animation="animated flipInY">
-                  Bongo
-                </h2>
-                <p  data-animation="animated rotateIn"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-cara.png" alt=""></p>
-                <button data-animation="animated flipInX">Watch Bongo In Action</button>
-              </div>
-            </div><!-- /.item -->
+          // The Query
+          $the_query = new WP_Query( array( 'post_type' => 'page' ) );
 
-            <!-- Third slide -->
-            <div class="item" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/bongo.jpg');">
-              <div class="carousel-caption">
-                <h4 data-animation="animated fadeInDown">
-                  I never realized that there was a place where people lived that wasn’t so much about what you had; everyone’s living in tents, hanging out together and being communal and really enjoying living everyday.
-                </h4>
-                <hr data-animation="animated zoomInUp">
-                <h2 data-animation="animated flipInY">
-                  Bongo
-                </h2>
-                <p  data-animation="animated rotateIn"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-cara.png" alt=""></p>
-                <button data-animation="animated flipInX">Watch Bongo In Action</button>
-              </div>
-            </div><!-- /.item -->
+            // The Loop
+            if ( $the_query->have_posts() ) {
 
-            <!-- Fourth slide -->
-            <div class="item" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/bongo.jpg');">
-              <div class="carousel-caption">
-                <h4 data-animation="animated fadeInDown">
-                  I never realized that there was a place where people lived that wasn’t so much about what you had; everyone’s living in tents, hanging out together and being communal and really enjoying living everyday.
-                </h4>
-                <hr data-animation="animated zoomInUp">
-                <h2 data-animation="animated flipInY">
-                  Bongo
-                </h2>
-                <p  data-animation="animated rotateIn"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-cara.png" alt=""></p>
-                <button data-animation="animated flipInX">Watch Bongo In Action</button>
-              </div>
-            </div><!-- /.item -->
+            while ( $the_query->have_posts() ) {
+              $the_query->the_post();
+              ?>
+
+              <?php if (get_the_id() != 5) { ?>
+
+                <div class="item <?php if( $the_query->current_post == 0 && !is_paged() ) { ?>active<?php } ?>" style="background-image: url('<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>');">
+                  <div class="carousel-caption">
+                    <h4 data-animation="animated fadeInDown">
+                      <?php the_content(); ?>
+                    </h4>
+                    <hr data-animation="animated zoomInUp">
+                    <h2 data-animation="animated flipInY">
+                      <?php the_title(); ?>
+                    </h2>
+                    <p  data-animation="animated rotateIn"><img src="<?php echo get_field('icon')['sizes']['large']; ?>" alt=""></p>
+                    <a href="<?php echo get_permalink(); ?>"><button data-animation="animated flipInX"><?php echo get_field('call_to_action') ?></button></a>
+                  </div>
+                </div>
+
+              <?php } ?>
+
+              <?php
+            }
+
+            } else {
+            // no posts found
+            }
+
+          /* Restore original Post Data */
+          wp_reset_postdata();
+
+          ?>
 
         </div><!-- /.carousel-inner -->
 
