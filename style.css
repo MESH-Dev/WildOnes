@@ -4015,18 +4015,25 @@ footer p {
 /* line 19, sass/modules/_modules.scss */
 .home-panel .home-play-btn {
   margin: 10px 0 0 0;
-  cursor: pointer;
 }
 /* line 23, sass/modules/_modules.scss */
+.home-panel .home-play-btn img {
+  cursor: pointer;
+}
+/* line 26, sass/modules/_modules.scss */
+.home-panel .home-play-btn img:hover {
+  opacity: 0.7;
+}
+/* line 31, sass/modules/_modules.scss */
 .home-panel .home-callout {
   margin: 100px 0 0 0;
 }
-/* line 26, sass/modules/_modules.scss */
+/* line 34, sass/modules/_modules.scss */
 .home-panel .home-callout a:hover {
   opacity: 0.7;
 }
 
-/* line 33, sass/modules/_modules.scss */
+/* line 41, sass/modules/_modules.scss */
 .vimeo {
   position: absolute;
   top: 0;
@@ -4034,31 +4041,34 @@ footer p {
   right: 0;
   display: none;
   background-color: black;
-}
-/* line 41, sass/modules/_modules.scss */
-.vimeo iframe {
   width: 100%;
   height: 100vh;
 }
+/* line 51, sass/modules/_modules.scss */
+.vimeo iframe {
+  width: 100%;
+  height: 100vh;
+  display: none;
+}
 
-/* line 53, sass/modules/_modules.scss */
+/* line 64, sass/modules/_modules.scss */
 .carousel-control.left {
   background-image: url("img/arrow-left.png");
   background-repeat: no-repeat;
 }
 
-/* line 58, sass/modules/_modules.scss */
+/* line 69, sass/modules/_modules.scss */
 .carousel-control.right {
   background-image: url("img/arrow-right.png");
   background-repeat: no-repeat;
 }
 
-/* line 63, sass/modules/_modules.scss */
+/* line 74, sass/modules/_modules.scss */
 .sr-only {
   display: none;
 }
 
-/* line 65, sass/modules/_modules.scss */
+/* line 76, sass/modules/_modules.scss */
 #home-carousel.carousel .item {
   min-height: 350px;
   height: 100vh;
@@ -4068,7 +4078,7 @@ footer p {
   background-size: cover;
 }
 
-/* line 74, sass/modules/_modules.scss */
+/* line 85, sass/modules/_modules.scss */
 .carousel-caption {
   width: 600px;
   margin: 0 auto;
@@ -4082,7 +4092,7 @@ footer p {
   /* Animation delays */
   /* Animation delays */
 }
-/* line 87, sass/modules/_modules.scss */
+/* line 98, sass/modules/_modules.scss */
 .carousel-caption h4 {
   margin: 0;
   font-size: 1.25em;
@@ -4091,12 +4101,12 @@ footer p {
   letter-spacing: 0.1em;
   padding: 0 0 20px 0;
 }
-/* line 96, sass/modules/_modules.scss */
+/* line 107, sass/modules/_modules.scss */
 .carousel-caption hr {
   width: 300px;
   border-bottom: 1px solid #ffffff;
 }
-/* line 105, sass/modules/_modules.scss */
+/* line 116, sass/modules/_modules.scss */
 .carousel-caption h2 {
   margin: 0;
   font-family: "akularegular";
@@ -4104,7 +4114,7 @@ footer p {
   letter-spacing: 0.7em;
   padding: 0 0 15px 0;
 }
-/* line 113, sass/modules/_modules.scss */
+/* line 124, sass/modules/_modules.scss */
 .carousel-caption button {
   border: 1px solid #000000;
   font-size: 20px;
@@ -4116,52 +4126,52 @@ footer p {
   color: white;
   background-color: rgba(255, 255, 255, 0.2);
 }
-/* line 124, sass/modules/_modules.scss */
+/* line 135, sass/modules/_modules.scss */
 .carousel-caption button:hover {
   color: white;
   background-color: rgba(0, 0, 0, 0.2);
 }
-/* line 133, sass/modules/_modules.scss */
+/* line 144, sass/modules/_modules.scss */
 .carousel-caption h4 {
   -webkit-animation-delay: .5s;
   animation-delay: .5s;
 }
-/* line 137, sass/modules/_modules.scss */
+/* line 148, sass/modules/_modules.scss */
 .carousel-caption hr {
   -webkit-animation-delay: .5s;
   animation-delay: .5s;
 }
-/* line 141, sass/modules/_modules.scss */
+/* line 152, sass/modules/_modules.scss */
 .carousel-caption h2 {
   -webkit-animation-delay: 1.5s;
   animation-delay: 1.5s;
 }
-/* line 145, sass/modules/_modules.scss */
+/* line 156, sass/modules/_modules.scss */
 .carousel-caption p {
   -webkit-animation-delay: 1.75s;
   animation-delay: 1.75s;
 }
-/* line 149, sass/modules/_modules.scss */
+/* line 160, sass/modules/_modules.scss */
 .carousel-caption button {
   -webkit-animation-delay: 2s;
   animation-delay: 2s;
 }
 
-/* line 160, sass/modules/_modules.scss */
+/* line 171, sass/modules/_modules.scss */
 .four-imgs {
   padding: 30px 0 40px 0;
   background-color: #000000;
   width: 100%;
   text-align: center;
 }
-/* line 168, sass/modules/_modules.scss */
+/* line 179, sass/modules/_modules.scss */
 .four-imgs h2 {
   margin: 0;
   color: #ffffff;
   padding: 0 10px 10px 10px;
   border-bottom: 1px solid #ffffff;
 }
-/* line 175, sass/modules/_modules.scss */
+/* line 186, sass/modules/_modules.scss */
 .four-imgs p {
   padding: 25px 0px 0px 0px;
   font-size: 20px;
@@ -4169,43 +4179,43 @@ footer p {
   font-weight: 700;
   letter-spacing: .05em;
 }
-/* line 182, sass/modules/_modules.scss */
+/* line 193, sass/modules/_modules.scss */
 .four-imgs img {
   padding-bottom: 20px;
 }
 
-/* line 192, sass/modules/_modules.scss */
+/* line 203, sass/modules/_modules.scss */
 .email-signup {
   padding: 30px 0 40px 0;
   background-color: #74c4d6;
   width: 100%;
   text-align: center;
 }
-/* line 198, sass/modules/_modules.scss */
+/* line 209, sass/modules/_modules.scss */
 .email-signup h2 {
   margin: 0;
   color: #000000;
   padding: 0 10px 20px 10px;
 }
-/* line 206, sass/modules/_modules.scss */
+/* line 217, sass/modules/_modules.scss */
 .email-signup .form-group .columns {
   margin: 0 2px 0 2px;
 }
-/* line 211, sass/modules/_modules.scss */
+/* line 222, sass/modules/_modules.scss */
 .email-signup form.left-offset {
   margin-left: 20px;
 }
-/* line 215, sass/modules/_modules.scss */
+/* line 226, sass/modules/_modules.scss */
 .email-signup fieldset {
   margin: 0;
   padding: 0;
   border: 0;
 }
-/* line 221, sass/modules/_modules.scss */
+/* line 232, sass/modules/_modules.scss */
 .email-signup label, .email-signup legend {
   display: none;
 }
-/* line 225, sass/modules/_modules.scss */
+/* line 236, sass/modules/_modules.scss */
 .email-signup input[type="text"] {
   margin-bottom: 4px;
   padding: 20px 15px 20px 15px;
@@ -4217,23 +4227,23 @@ footer p {
   font-weight: 800;
   letter-spacing: .15em;
 }
-/* line 237, sass/modules/_modules.scss */
+/* line 248, sass/modules/_modules.scss */
 .email-signup input.email {
   width: 668px;
 }
 @media only screen and (min-width: 768px) and (max-width: 1079px) {
-  /* line 237, sass/modules/_modules.scss */
+  /* line 248, sass/modules/_modules.scss */
   .email-signup input.email {
     width: 460px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 237, sass/modules/_modules.scss */
+  /* line 248, sass/modules/_modules.scss */
   .email-signup input.email {
     width: 100%;
   }
 }
-/* line 248, sass/modules/_modules.scss */
+/* line 259, sass/modules/_modules.scss */
 .email-signup button.submit {
   width: 668px;
   font-size: 20px;
@@ -4246,22 +4256,22 @@ footer p {
   float: left;
 }
 @media only screen and (min-width: 768px) and (max-width: 1079px) {
-  /* line 248, sass/modules/_modules.scss */
+  /* line 259, sass/modules/_modules.scss */
   .email-signup button.submit {
     width: 460px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 248, sass/modules/_modules.scss */
+  /* line 259, sass/modules/_modules.scss */
   .email-signup button.submit {
     width: 100%;
   }
 }
-/* line 265, sass/modules/_modules.scss */
+/* line 276, sass/modules/_modules.scss */
 .email-signup button.submit:hover {
   background-color: #fcb040;
 }
-/* line 271, sass/modules/_modules.scss */
+/* line 282, sass/modules/_modules.scss */
 .email-signup .social-text {
   width: 100%;
   padding: 40px 0 20px 0;
@@ -4272,7 +4282,7 @@ footer p {
   text-transform: uppercase;
   letter-spacing: .15em;
 }
-/* line 282, sass/modules/_modules.scss */
+/* line 293, sass/modules/_modules.scss */
 .email-signup .social-text .left {
   width: 650px;
   padding-left: 30px;
@@ -4280,12 +4290,12 @@ footer p {
   float: left;
 }
 @media screen and (max-width: 768px) {
-  /* line 282, sass/modules/_modules.scss */
+  /* line 293, sass/modules/_modules.scss */
   .email-signup .social-text .left {
     width: 100%;
   }
 }
-/* line 291, sass/modules/_modules.scss */
+/* line 302, sass/modules/_modules.scss */
 .email-signup .social-text .right {
   float: right;
   padding-right: 30px;
@@ -4293,7 +4303,7 @@ footer p {
   text-align: right;
 }
 @media screen and (max-width: 768px) {
-  /* line 291, sass/modules/_modules.scss */
+  /* line 302, sass/modules/_modules.scss */
   .email-signup .social-text .right {
     width: 100%;
     float: left;
@@ -4302,13 +4312,13 @@ footer p {
     padding-left: 30px;
   }
 }
-/* line 304, sass/modules/_modules.scss */
+/* line 315, sass/modules/_modules.scss */
 .email-signup .social-text a:hover {
   opacity: 1;
   color: #fcb040;
 }
 
-/* line 319, sass/modules/_modules.scss */
+/* line 330, sass/modules/_modules.scss */
 #bottom-carousel {
   width: 100%;
   height: 330px;
@@ -4316,7 +4326,7 @@ footer p {
   overflow: hidden;
 }
 
-/* line 327, sass/modules/_modules.scss */
+/* line 338, sass/modules/_modules.scss */
 #bottom-carousel div.scrollableArea img {
   position: relative;
   float: left;
@@ -4332,7 +4342,7 @@ footer p {
   user-select: none;
 }
 
-/* line 348, sass/modules/_modules.scss */
+/* line 359, sass/modules/_modules.scss */
 .footer-parrallax {
   min-height: 90vh;
   background: transparent;

@@ -1,10 +1,21 @@
 jQuery(document).ready(function($){
 
 
-  $(".home-play-btn").click(function() {
-    $('.vimeo').fadeIn(2000, function() {
-      $('.vimeo iframe').fadeIn(2000);
+  $(".home-play-btn").click(function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    $('.vimeo').fadeIn(1000, function() {
+      $('.vimeo iframe').fadeIn(1000);
     });
+  });
+
+  $('.vimeo').click(function(e) {
+    e.stopPropagation();
+  });
+
+  $(document).click(function() {
+    $('.vimeo').fadeOut();
   });
 
     //Function to animate slider captions

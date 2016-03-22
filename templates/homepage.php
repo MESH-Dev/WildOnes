@@ -6,7 +6,14 @@ get_header(); ?>
 <main id="main" class="site-main" role="main">
 
     <!-- /////////HOME PANEL////////////// -->
-    <div class="home-panel" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/home-bg.jpg');">
+
+    <?php
+
+    $image = get_field('background_image');
+
+    ?>
+
+    <div class="home-panel" style="background-image: url('<?php echo $image['sizes']['background-fullscreen'] ?>');">
 
         <div class="container">
             <div class="row">
@@ -24,7 +31,7 @@ get_header(); ?>
     </div>
 
     <div class="vimeo">
-      <iframe src="https://player.vimeo.com/video/101111912" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <iframe src="https://player.vimeo.com/video/<?php echo get_field('vimeo_id'); ?>" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen ></iframe>
     </div>
 
 
