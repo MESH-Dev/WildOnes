@@ -10,7 +10,7 @@
     display: table;
     width: 100%;
     top: 0px;
- 
+
 
     margin-bottom: 30px;
 
@@ -21,6 +21,7 @@
     }
     .home-play-btn{
 		 margin: 10px 0 0 0;
+     cursor: pointer;
     }
     .home-callout{
     	margin: 100px 0 0 0;
@@ -31,7 +32,22 @@
     }
 }
 
- 
+.vimeo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  background-color: black;
+
+  iframe {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+
+
 // ==========================================================================
 //CAROUSEL
 // ==========================================================================
@@ -47,11 +63,11 @@
 }
 
 .sr-only{display: none;}
- 
+
 #home-carousel.carousel .item {
 	min-height: 350px;
 	height:  100vh;
-	width:100%; 
+	width:100%;
 	background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -61,14 +77,14 @@
 	width: 600px;
 	margin: 0 auto;
 	position: absolute;
- 
+
 	top: 35vh;
 	z-index: 10;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	color: #fff;
 	text-align: center;
- 
+
 
 	h4{
 		margin:0;
@@ -82,20 +98,20 @@
 	hr{
    	 	width: 300px;
     	border-bottom: 1px solid $white;
-    
+
 	}
 	p{
-		 
+
 	}
 
 	h2{
 		margin: 0;
 		font-family: $font-family--secondary;
-		font-size: 32px; 
+		font-size: 32px;
 		letter-spacing: 0.7em;
 		padding: 0 0 15px 0;
 	}
- 
+
 	button {
 		border: 1px solid $black;
 		font-size: 20px;
@@ -103,7 +119,7 @@
 		letter-spacing: .1em;
 		text-transform: uppercase;
 		padding: 10px;
-		margin-top: 0px; 
+		margin-top: 0px;
 		color: white;
 		background-color:rgba(255,255,255,0.2);
 
@@ -144,7 +160,7 @@
 // ==========================================================================
 
 .four-imgs{
-	 
+
 	padding: 30px 0 40px 0;
 	background-color: $black;
 	width: 100%;
@@ -174,7 +190,7 @@
 // ==========================================================================
 // FOUR IMG PANEL
 // ==========================================================================
- 
+
 .email-signup{
 	padding: 30px 0 40px 0;
 	background-color: $blue;
@@ -185,7 +201,7 @@
 		margin: 0;
 		color: $black;
 		padding: 0 10px 20px 10px;
-		 
+
 	}
 
 	.form-group{
@@ -193,9 +209,9 @@
 			margin: 0 2px 0 2px;
 		}
 	}
-	
+
 	form.left-offset{
-		margin-left: 20px; 
+		margin-left: 20px;
 	}
 
 	fieldset{
@@ -260,13 +276,13 @@
 		font-size: em(12);
 		line-height: em(18);
 		font-weight: 800;
-		color: #494848; 
+		color: #494848;
 		text-transform: uppercase;
 		letter-spacing: .15em;
 
 
 		.left{
-			width: 650px; 
+			width: 650px;
 			padding-left: 30px;
 			text-align: left;
 			float: left;
@@ -277,7 +293,7 @@
 		.right{
 			float: right;
 			padding-right: 30px;
-			display: inline; 
+			display: inline;
 			text-align: right;
 			@include mq($tablet-width, "max-width") {
 		    	width: 100%;
@@ -300,13 +316,14 @@
 // ==========================================================================
 // BOTTOM CAROUSEL
 // ==========================================================================
- 
+
 
 #bottom-carousel
 {
 	width:100%;
 	height: 330px;
 	position: relative;
+  overflow: hidden;
 }
 
 #bottom-carousel div.scrollableArea img
@@ -329,15 +346,8 @@
 // ==========================================================================
 // FOOTER PARRALAX
 // ==========================================================================
- 
+
 .footer-parrallax{
 	min-height: 90vh;
     background: transparent;
 }
-
-
-
-
-
-
-
