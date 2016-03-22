@@ -86,14 +86,19 @@
 	max-width: 600px;
 	margin: 0 auto;
 	position: absolute;
-
-	top: 35vh;
+  left: 20%;
+  right: 20%;
+  padding-bottom: 30px;
+	top: 25vh;
 	z-index: 10;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	color: #fff;
 	text-align: center;
 
+  @include mq($tablet-width, 'max-width') {
+    top: 1vh;
+  }
 
 	h4{
 		margin:0;
@@ -102,6 +107,7 @@
 		font-weight: 500;
 		letter-spacing: 0.1em;
 		padding: 0 0 20px 0;
+    text-transform: uppercase;
 	}
 
 	hr{
