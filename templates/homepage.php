@@ -14,7 +14,6 @@ get_header(); ?>
     ?>
 
     <div class="home-panel" style="background-image: url('<?php echo $image['sizes']['background-fullscreen'] ?>');">
-
         <div class="container">
             <div class="row">
                 <div class="twelve columns home-logo center">

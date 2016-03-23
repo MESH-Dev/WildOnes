@@ -59,4 +59,17 @@ jQuery(document).ready(function($){
 			touchScrolling: true
     });
 
+    jQuery(document).scroll(function(){
+      if(jQuery(this).scrollTop() > 5) {
+        jQuery('.interior-header').show();
+        jQuery('.interior-header').addClass('slideInDown');
+        jQuery('.interior-header').removeClass('slideOutUp');
+      } else {
+        jQuery('.interior-header').removeClass('slideInDown');
+        jQuery('.interior-header').addClass('slideOutUp');
+      }
+    });
+
+
+
 });

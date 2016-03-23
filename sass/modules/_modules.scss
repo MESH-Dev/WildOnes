@@ -11,30 +11,29 @@
     width: 100%;
     top: 0px;
     margin-bottom: 30px;
+}
+
+.home-logo{
+ margin: calc(15vh) 0 0 0;
+}
+.home-play-btn{
+ margin: 10px 0 0 0;
 
 
-    .home-logo{
-		 margin: calc(15vh) 0 0 0;
-    }
-    .home-play-btn{
-		 margin: 10px 0 0 0;
+ img {
+   cursor: pointer;
 
+   &:hover {
+     opacity: 0.7;
+   }
+ }
+}
+.home-callout{
+  margin: 100px 0 0 0;
 
-     img {
-       cursor: pointer;
-
-       &:hover {
-         opacity: 0.7;
-       }
-     }
-    }
-    .home-callout{
-    	margin: 100px 0 0 0;
-
-    	a:hover{
-    		opacity: 0.7
-    	}
-    }
+  a:hover{
+    opacity: 0.7
+  }
 }
 
 
@@ -409,5 +408,68 @@ footer {
     padding-bottom: 25px;
     right: initial;
     bottom: initial;
+  }
+}
+
+.interior-header {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  display: none;
+}
+
+.interior-header-item {
+  text-align: center;
+  padding: 60px 0;
+
+  @include mq($tablet-width, 'max-width') {
+    padding: 10px 0;
+  }
+
+  a {
+    color: #fcb040;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+.interior-logo {
+  padding: 20px;
+}
+
+.interior-carousel {
+  margin: 15px 0;
+}
+
+.interior-email {
+  margin-bottom: 15px;
+}
+
+.adventurers {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.adventurer {
+  width: 33.3333333%;
+  float: left;
+
+  @include mq($tablet-width, "max-width") {
+    width: 100%;
+  }
+
+  .carousel-caption {
+    display: block;
+  }
+
+  .carousel-caption-container {
+    padding: 0 30px;
+
+    hr {
+      margin-bottom: 30px;
+    }
   }
 }
