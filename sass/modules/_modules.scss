@@ -456,6 +456,7 @@ footer {
 .adventurer {
   width: 33.3333333%;
   float: left;
+  position: relative;
 
   @include mq($desktop-width, "max-width") {
     width: 100%;

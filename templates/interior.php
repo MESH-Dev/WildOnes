@@ -19,12 +19,12 @@ get_header(); ?>
 
         <div class="two columns">
           <div class="interior-header-item">
-            <a href="">Jo-Beth</a>
+            <a href="<?php echo get_permalink(9); ?>">Jo-Beth</a>
           </div>
         </div>
         <div class="two columns">
           <div class="interior-header-item">
-            <a href="">Kyle</a>
+            <a href="<?php echo get_permalink(11); ?>">Kyle</a>
           </div>
         </div>
         <div class="four columns">
@@ -34,12 +34,12 @@ get_header(); ?>
         </div>
         <div class="two columns">
           <div class="interior-header-item">
-            <a href="">Bongo</a>
+            <a href="<?php echo get_permalink(13); ?>">Bongo</a>
           </div>
         </div>
         <div class="two columns">
           <div class="interior-header-item">
-            <a href="">Joe</a>
+            <a href="<?php echo get_permalink(15); ?>">Joe</a>
           </div>
         </div>
 
@@ -267,8 +267,8 @@ get_header(); ?>
 
           <?php if (get_the_id() != 5 && get_the_id() != $this_id) { ?>
 
-          <a href="<?php echo get_permalink(); ?>">
-            <div class="adventurer" style="background-image: url('<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_id())); ?>');">
+          <div class="adventurer" style="background-image: url('<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_id())); ?>');">
+            <a href="<?php echo get_permalink(); ?>">
               <div class="carousel-caption">
                 <div class="carousel-caption-container">
                   <h2 data-animation="animated flipInY">
@@ -278,8 +278,8 @@ get_header(); ?>
                   <p  data-animation="animated rotateIn"><img src="<?php echo get_field('icon')['sizes']['large']; ?>" alt=""></p>
                 </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
 
           <?php } ?>
 

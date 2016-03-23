@@ -4460,6 +4460,7 @@ footer p {
 .adventurer {
   width: 33.3333333%;
   float: left;
+  position: relative;
 }
 @media screen and (max-width: 900px) {
   /* line 456, sass/modules/_modules.scss */
@@ -4467,15 +4468,15 @@ footer p {
     width: 100%;
   }
 }
-/* line 464, sass/modules/_modules.scss */
+/* line 465, sass/modules/_modules.scss */
 .adventurer .carousel-caption {
   display: block;
 }
-/* line 468, sass/modules/_modules.scss */
+/* line 469, sass/modules/_modules.scss */
 .adventurer .carousel-caption-container {
   padding: 0 30px;
 }
-/* line 471, sass/modules/_modules.scss */
+/* line 472, sass/modules/_modules.scss */
 .adventurer .carousel-caption-container hr {
   margin-bottom: 30px;
 }
