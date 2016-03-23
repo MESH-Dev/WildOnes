@@ -205,7 +205,7 @@
 // ==========================================================================
 
 .email-signup{
-	padding: 30px 0 40px 0;
+	padding: 30px 0 0 0;
 	background-color: $blue;
 	width: 100%;
 	text-align: center;
@@ -224,7 +224,7 @@
 	}
 
 	form.left-offset{
-		margin-left: 20px;
+		// margin-left: 20px;
 	}
 
 	fieldset{
@@ -292,11 +292,12 @@
 		color: #494848;
 		text-transform: uppercase;
 		letter-spacing: .15em;
-
+    display: inline-block;
 
 		.left{
 			width: 650px;
 			padding-left: 30px;
+      padding-right: 30px;
 			text-align: left;
 			float: left;
 			@include mq($tablet-width, "max-width") {
@@ -305,6 +306,7 @@
 		}
 		.right{
 			float: right;
+      padding-left: 30px;
 			padding-right: 30px;
 			display: inline;
 			text-align: right;

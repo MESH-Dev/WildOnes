@@ -4188,7 +4188,7 @@ footer p {
 
 /* line 207, sass/modules/_modules.scss */
 .email-signup {
-  padding: 30px 0 40px 0;
+  padding: 30px 0 0 0;
   background-color: #74c4d6;
   width: 100%;
   text-align: center;
@@ -4202,10 +4202,6 @@ footer p {
 /* line 221, sass/modules/_modules.scss */
 .email-signup .form-group .columns {
   margin: 0 2px 0 2px;
-}
-/* line 226, sass/modules/_modules.scss */
-.email-signup form.left-offset {
-  margin-left: 20px;
 }
 /* line 230, sass/modules/_modules.scss */
 .email-signup fieldset {
@@ -4283,11 +4279,13 @@ footer p {
   color: #494848;
   text-transform: uppercase;
   letter-spacing: .15em;
+  display: inline-block;
 }
 /* line 297, sass/modules/_modules.scss */
 .email-signup .social-text .left {
   width: 650px;
   padding-left: 30px;
+  padding-right: 30px;
   text-align: left;
   float: left;
 }
@@ -4297,15 +4295,16 @@ footer p {
     width: 100%;
   }
 }
-/* line 306, sass/modules/_modules.scss */
+/* line 307, sass/modules/_modules.scss */
 .email-signup .social-text .right {
   float: right;
+  padding-left: 30px;
   padding-right: 30px;
   display: inline;
   text-align: right;
 }
 @media screen and (max-width: 768px) {
-  /* line 306, sass/modules/_modules.scss */
+  /* line 307, sass/modules/_modules.scss */
   .email-signup .social-text .right {
     width: 100%;
     float: left;
@@ -4314,13 +4313,13 @@ footer p {
     padding-left: 30px;
   }
 }
-/* line 319, sass/modules/_modules.scss */
+/* line 321, sass/modules/_modules.scss */
 .email-signup .social-text a:hover {
   opacity: 1;
   color: #fcb040;
 }
 
-/* line 334, sass/modules/_modules.scss */
+/* line 336, sass/modules/_modules.scss */
 #bottom-carousel {
   width: 100%;
   height: 330px;
@@ -4328,7 +4327,7 @@ footer p {
   overflow: hidden;
 }
 
-/* line 342, sass/modules/_modules.scss */
+/* line 344, sass/modules/_modules.scss */
 #bottom-carousel div.scrollableArea img {
   position: relative;
   float: left;
@@ -4344,7 +4343,7 @@ footer p {
   user-select: none;
 }
 
-/* line 363, sass/modules/_modules.scss */
+/* line 365, sass/modules/_modules.scss */
 .footer-parrallax {
   min-height: 90vh;
   background: transparent;
