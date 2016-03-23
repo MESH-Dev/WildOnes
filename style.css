@@ -4383,9 +4383,11 @@ footer p {
 .site-footer {
   padding: 35px 0 10px;
   position: relative;
+  float: left;
+  width: 100%;
 }
 
-/* line 396, sass/modules/_modules.scss */
+/* line 398, sass/modules/_modules.scss */
 .social-icons-container {
   display: inline;
   position: absolute;
@@ -4394,7 +4396,7 @@ footer p {
   font-size: 24px;
 }
 @media screen and (max-width: 900px) {
-  /* line 396, sass/modules/_modules.scss */
+  /* line 398, sass/modules/_modules.scss */
   .social-icons-container {
     position: relative;
     text-align: center;
@@ -4406,7 +4408,7 @@ footer p {
   }
 }
 
-/* line 414, sass/modules/_modules.scss */
+/* line 416, sass/modules/_modules.scss */
 .interior-header {
   background-color: black;
   position: fixed;
@@ -4416,67 +4418,68 @@ footer p {
   display: none;
 }
 
-/* line 423, sass/modules/_modules.scss */
+/* line 425, sass/modules/_modules.scss */
 .interior-header-item {
   text-align: center;
   padding: 60px 0;
 }
 @media screen and (max-width: 768px) {
-  /* line 423, sass/modules/_modules.scss */
+  /* line 425, sass/modules/_modules.scss */
   .interior-header-item {
     padding: 10px 0;
   }
 }
-/* line 431, sass/modules/_modules.scss */
+/* line 433, sass/modules/_modules.scss */
 .interior-header-item a {
   color: #fcb040;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-/* line 438, sass/modules/_modules.scss */
+/* line 440, sass/modules/_modules.scss */
 .interior-logo {
   padding: 20px;
 }
 
-/* line 442, sass/modules/_modules.scss */
+/* line 444, sass/modules/_modules.scss */
 .interior-carousel {
   margin: 15px 0;
 }
 
-/* line 446, sass/modules/_modules.scss */
+/* line 448, sass/modules/_modules.scss */
 .interior-email {
   margin-bottom: 15px;
 }
 
-/* line 450, sass/modules/_modules.scss */
+/* line 452, sass/modules/_modules.scss */
 .adventurers {
   position: relative;
   z-index: 10;
   width: 100%;
+  float: left;
 }
 
-/* line 456, sass/modules/_modules.scss */
+/* line 459, sass/modules/_modules.scss */
 .adventurer {
   width: 33.3333333%;
   float: left;
   position: relative;
 }
 @media screen and (max-width: 900px) {
-  /* line 456, sass/modules/_modules.scss */
+  /* line 459, sass/modules/_modules.scss */
   .adventurer {
     width: 100%;
   }
 }
-/* line 465, sass/modules/_modules.scss */
+/* line 468, sass/modules/_modules.scss */
 .adventurer .carousel-caption {
   display: block;
 }
-/* line 469, sass/modules/_modules.scss */
+/* line 472, sass/modules/_modules.scss */
 .adventurer .carousel-caption-container {
   padding: 0 30px;
 }
-/* line 472, sass/modules/_modules.scss */
+/* line 475, sass/modules/_modules.scss */
 .adventurer .carousel-caption-container hr {
   margin-bottom: 30px;
 }
