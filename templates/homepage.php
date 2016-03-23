@@ -55,17 +55,19 @@ get_header(); ?>
 
               <?php if (get_the_id() != 5) { ?>
 
-                <div class="item <?php if( $the_query->current_post == 0 && !is_paged() ) { ?>active<?php } ?>" style="background-image: url('<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>');">
+                <div class="item <?php if( $the_query->current_post == 0 && !is_paged() ) { ?>active<?php } ?>" style="background-image: url('<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_id())); ?>');">
                   <div class="carousel-caption">
-                    <h4 data-animation="animated fadeInDown">
-                      <?php the_content(); ?>
-                    </h4>
-                    <hr data-animation="animated zoomInUp">
-                    <h2 data-animation="animated flipInY">
-                      <?php the_title(); ?>
-                    </h2>
-                    <p  data-animation="animated rotateIn"><img src="<?php echo get_field('icon')['sizes']['large']; ?>" alt=""></p>
-                    <a href="<?php echo get_permalink(); ?>"><button data-animation="animated flipInX"><?php echo get_field('call_to_action') ?></button></a>
+                    <div class="carousel-caption-container">
+                      <h4 data-animation="animated fadeInDown">
+                        <?php the_content(); ?>
+                      </h4>
+                      <hr data-animation="animated zoomInUp">
+                      <h2 data-animation="animated flipInY">
+                        <?php the_title(); ?>
+                      </h2>
+                      <p  data-animation="animated rotateIn"><img src="<?php echo get_field('icon')['sizes']['large']; ?>" alt=""></p>
+                      <a href="<?php echo get_permalink(); ?>"><button data-animation="animated flipInX"><?php echo get_field('call_to_action') ?></button></a>
+                    </div>
                   </div>
                 </div>
 

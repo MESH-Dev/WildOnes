@@ -32,7 +32,7 @@
 .carousel-inner > .active,
 .carousel-inner > .next,
 .carousel-inner > .prev {
-  display: block;
+  display: table !important;
 }
 .carousel-inner > .active {
   left: 0;
@@ -105,7 +105,7 @@
     font-size: 30px;
   }
   .carousel-caption {
-    
+
   }
   .carousel-indicators {
     bottom: 20px;
