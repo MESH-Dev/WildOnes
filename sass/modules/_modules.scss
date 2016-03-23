@@ -457,7 +457,7 @@ footer {
   width: 33.3333333%;
   float: left;
 
-  @include mq($tablet-width, "max-width") {
+  @include mq($desktop-width, "max-width") {
     width: 100%;
   }
 

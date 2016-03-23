@@ -4461,7 +4461,7 @@ footer p {
   width: 33.3333333%;
   float: left;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   /* line 456, sass/modules/_modules.scss */
   .adventurer {
     width: 100%;
