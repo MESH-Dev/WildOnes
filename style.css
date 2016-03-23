@@ -4322,18 +4322,17 @@ footer p {
 /* line 335, sass/modules/_modules.scss */
 #bottom-carousel {
   width: 100%;
-  height: 330px;
   position: relative;
 }
 
-/* line 342, sass/modules/_modules.scss */
+/* line 341, sass/modules/_modules.scss */
 .scrollWrapper {
   width: 100%;
   position: relative;
   overflow: hidden;
 }
 
-/* line 348, sass/modules/_modules.scss */
+/* line 347, sass/modules/_modules.scss */
 #bottom-carousel div.scrollableArea img {
   position: relative;
   float: left;
@@ -4349,17 +4348,17 @@ footer p {
   user-select: none;
 }
 
-/* line 369, sass/modules/_modules.scss */
+/* line 368, sass/modules/_modules.scss */
 .footer-parrallax {
   min-height: 90vh;
   background: transparent;
 }
 
-/* line 374, sass/modules/_modules.scss */
+/* line 373, sass/modules/_modules.scss */
 footer {
   background-color: #131313;
 }
-/* line 377, sass/modules/_modules.scss */
+/* line 376, sass/modules/_modules.scss */
 footer p {
   font-family: "Dosis", sans-serif;
   color: #aaaeaf;
@@ -4367,23 +4366,23 @@ footer p {
   letter-spacing: 0.15em;
 }
 
-/* line 385, sass/modules/_modules.scss */
+/* line 384, sass/modules/_modules.scss */
 .logo-container {
   text-align: center;
 }
 
-/* line 389, sass/modules/_modules.scss */
+/* line 388, sass/modules/_modules.scss */
 .logo-1, .logo-3 {
   padding-top: 10px;
 }
 
-/* line 393, sass/modules/_modules.scss */
+/* line 392, sass/modules/_modules.scss */
 .site-footer {
   padding: 35px 0 10px;
   position: relative;
 }
 
-/* line 398, sass/modules/_modules.scss */
+/* line 397, sass/modules/_modules.scss */
 .social-icons-container {
   display: inline;
   position: absolute;
@@ -4392,7 +4391,7 @@ footer p {
   font-size: 24px;
 }
 @media screen and (max-width: 900px) {
-  /* line 398, sass/modules/_modules.scss */
+  /* line 397, sass/modules/_modules.scss */
   .social-icons-container {
     position: relative;
     text-align: center;
