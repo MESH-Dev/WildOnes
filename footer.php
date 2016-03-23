@@ -4,13 +4,37 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="twelve columns">
-				<nav class="main-navigation">
-
-				</nav>
-					<p>Designed by <a href="http://meshfresh.com" target="_blank">MESH</a></p>
+			<div class="two columns offset-by-two">
+				<div class="logo-container logo-1">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/keen_logo.png" />
+				</div>
 			</div><!-- End of Footer -->
+			<div class="four columns">
+				<div class="logo-container">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/aotg_logo.png" />
+				</div>
+			</div>
+			<div class="two columns">
+				<div class="logo-container">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/waterstonia_logo.png" />
+				</div>
+			</div>
 		</div>
+		<div class="row">
+			<div class="twelve columns">
+				<div class="logo-container">
+					<p>Copyright Adventures on the Gorge, 2016, All rights reserved. Site by <a href="http://meshfresh.com" target="_blank">MESH</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="social-icons-container">
+		<a href=""><i class="fa fa-facebook"></i></a>
+		<a href=""><i class="fa fa-pinterest"></i></a>
+		<a href=""><i class="fa fa-youtube"></i></a>
+		<a href=""><i class="fa fa-vimeo"></i></a>
+		<a href=""><i class="fa fa-instagram"></i></a>
 	</div>
 
 </footer>

@@ -372,5 +372,33 @@
 }
 
 footer {
-  
+  background-color: #131313;
+
+  p {
+    font-family: $font-family--tertiary;
+    color: #aaaeaf;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+  }
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.logo-1, .logo-3 {
+  padding-top: 10px;
+}
+
+.site-footer {
+  padding: 35px 0 10px;
+  position: relative;
+}
+
+.social-icons-container {
+  display: inline;
+  position: absolute;
+  right: 20px;
+  bottom: 30px;
+  font-size: 24px;
 }

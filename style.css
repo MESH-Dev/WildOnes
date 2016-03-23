@@ -4354,3 +4354,40 @@ footer p {
   min-height: 90vh;
   background: transparent;
 }
+
+/* line 374, sass/modules/_modules.scss */
+footer {
+  background-color: #131313;
+}
+/* line 377, sass/modules/_modules.scss */
+footer p {
+  font-family: "Dosis", sans-serif;
+  color: #aaaeaf;
+  font-size: 13px;
+  letter-spacing: 0.15em;
+}
+
+/* line 385, sass/modules/_modules.scss */
+.logo-container {
+  text-align: center;
+}
+
+/* line 389, sass/modules/_modules.scss */
+.logo-1, .logo-3 {
+  padding-top: 10px;
+}
+
+/* line 393, sass/modules/_modules.scss */
+.site-footer {
+  padding: 35px 0 10px;
+  position: relative;
+}
+
+/* line 398, sass/modules/_modules.scss */
+.social-icons-container {
+  display: inline;
+  position: absolute;
+  right: 20px;
+  bottom: 30px;
+  font-size: 24px;
+}

@@ -107,18 +107,40 @@ get_header(); ?>
         <div class="container">
             <div class="row">
                 <div class="four columns offset-by-four">
-                    <h2 class="akula">How Wild Are You?</h2>
+                    <h2 class="akula"><?php echo get_field('panel_title'); ?></h2>
                 </div>
                 <div class="eight columns offset-by-two">
-                    <p>Enter to win a 3-day all-inclusive West Virginia adventure vacation for four people, plus gear, beer, and shirts on your backs. </p>
+                    <p><?php echo get_field('panel_description'); ?></p>
                 </div>
             </div>
 
             <div class="row">
-                <div class="three columns"><img src="<?php echo get_template_directory_uri(); ?>/img/zipline.png" alt=""></div>
-                <div class="three columns"><img src="<?php echo get_template_directory_uri(); ?>/img/zipline.png" alt=""></div>
-                <div class="three columns"><img src="<?php echo get_template_directory_uri(); ?>/img/zipline.png" alt=""></div>
-                <div class="three columns"><img src="<?php echo get_template_directory_uri(); ?>/img/zipline.png" alt=""></div>
+              <?php
+
+                // check if the repeater field has rows of data
+                if( have_rows('panel_images') ):
+
+                 	// loop through the rows of data
+                    while ( have_rows('panel_images') ) : the_row();
+
+                        $image = get_sub_field('panel_image')['sizes']['large'];
+                        ?>
+
+                        <div class="three columns">
+                          <img src="<?php echo $image; ?>" />
+                        </div>
+
+                        <?php
+                    endwhile;
+
+                else :
+
+                    // no rows found
+
+                endif;
+
+              ?>
+                
             </div>
 
         </div>
