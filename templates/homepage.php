@@ -264,7 +264,7 @@ get_header(); ?>
 
     ?>
 
-    <div class="footer-parrallax" data-parallax="scroll" data-position="0 50px" data-image-src="<?php echo $i; ?>">
+    <div class="footer-parrallax" data-parallax="scroll" data-image-src="<?php echo $i; ?>">
     </div>
 
 
