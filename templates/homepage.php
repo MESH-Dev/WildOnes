@@ -140,7 +140,7 @@ get_header(); ?>
                 endif;
 
               ?>
-                
+
             </div>
 
         </div>
@@ -220,13 +220,29 @@ get_header(); ?>
     <!-- /////////CAROUSEL PANEL////////////// -->
     <div id="bottom-carousel">
 
-          <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
+      <?php
+
+        // check if the repeater field has rows of data
+        if( have_rows('bottom_carousel_images') ):
+
+          // loop through the rows of data
+            while ( have_rows('bottom_carousel_images') ) : the_row();
+
+                $image = get_sub_field('bottom_carousel_image')['sizes']['large'];
+                ?>
+
+                <img src="<?php echo $image; ?>" />
+
+                <?php
+            endwhile;
+
+        else :
+
+            // no rows found
+
+        endif;
+
+      ?>
 
     </div>
 
@@ -242,7 +258,13 @@ get_header(); ?>
             <span class="sr-only">Next</span>
         </a> -->
 
-    <div class="footer-parrallax" data-parallax="scroll" data-position="0 50px" data-image-src="<?php echo get_template_directory_uri(); ?>/img/group.jpg">
+    <?php
+
+      $i = get_field('big_bottom_image')['sizes']['background-fullscreen'];
+
+    ?>
+
+    <div class="footer-parrallax" data-parallax="scroll" data-position="0 50px" data-image-src="<?php echo $i; ?>">
     </div>
 
 
