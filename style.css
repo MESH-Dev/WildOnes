@@ -4319,15 +4319,21 @@ footer p {
   color: #fcb040;
 }
 
-/* line 336, sass/modules/_modules.scss */
+/* line 335, sass/modules/_modules.scss */
 #bottom-carousel {
   width: 100%;
   height: 330px;
   position: relative;
+}
+
+/* line 342, sass/modules/_modules.scss */
+.scrollWrapper {
+  width: 100%;
+  position: relative;
   overflow: hidden;
 }
 
-/* line 344, sass/modules/_modules.scss */
+/* line 348, sass/modules/_modules.scss */
 #bottom-carousel div.scrollableArea img {
   position: relative;
   float: left;
@@ -4343,7 +4349,7 @@ footer p {
   user-select: none;
 }
 
-/* line 365, sass/modules/_modules.scss */
+/* line 369, sass/modules/_modules.scss */
 .footer-parrallax {
   min-height: 90vh;
   background: transparent;

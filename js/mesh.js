@@ -54,8 +54,9 @@ jQuery(document).ready(function($){
     });
 
 
-    $("#bottom-carousel").smoothDivScroll({
-
+    jQuery("#bottom-carousel").smoothDivScroll({
+      hotSpotScrolling: false,
+			touchScrolling: true
     });
 
 });

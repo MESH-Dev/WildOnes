@@ -1,4 +1,4 @@
- 
+
 
 <footer class="site-footer <?php if( is_page_template('templates/homepage-fullscreen.php') ) { echo "footer-fullscreen"; } ?>">
 
@@ -6,7 +6,7 @@
 		<div class="row">
 			<div class="twelve columns">
 				<nav class="main-navigation">
-				 
+
 				</nav>
 					<p>Designed by <a href="http://meshfresh.com" target="_blank">MESH</a></p>
 			</div><!-- End of Footer -->
@@ -22,6 +22,7 @@
 <script src="https://atog-meshdesign.c9users.io//wp-content/themes/wildones/js/smoothdivscroll.js"></script>
 <script src="https://atog-meshdesign.c9users.io//wp-content/themes/wildones/js/mousewheel.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/parrallax.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.kinetic.min.js"></script>
 
 </body>
 </html>

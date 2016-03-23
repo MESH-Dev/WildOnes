@@ -197,14 +197,16 @@ get_header(); ?>
 
     <!-- /////////CAROUSEL PANEL////////////// -->
     <div id="bottom-carousel">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
-    </div><!-- /.carousel-inner -->
+
+          <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
+
+    </div>
 
         <!-- Controls -->
     <!--    <a class="left carousel-control" href="#bottom-carousel"
@@ -218,8 +220,7 @@ get_header(); ?>
             <span class="sr-only">Next</span>
         </a> -->
 
-    <div class="footer-parrallax" data-parallax="scroll" data-image-src="<?php echo get_template_directory_uri(); ?>/img/group.jpg">
-
+    <div class="footer-parrallax" data-parallax="scroll" data-position="0 50px" data-image-src="<?php echo get_template_directory_uri(); ?>/img/group.jpg">
     </div>
 
 
