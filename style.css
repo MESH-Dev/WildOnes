@@ -4391,3 +4391,15 @@ footer p {
   bottom: 30px;
   font-size: 24px;
 }
+@media screen and (max-width: 900px) {
+  /* line 398, sass/modules/_modules.scss */
+  .social-icons-container {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding-bottom: 25px;
+    right: initial;
+    bottom: initial;
+  }
+}

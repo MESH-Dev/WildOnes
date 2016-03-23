@@ -6,7 +6,7 @@ jQuery(document).ready(function($){
     e.stopPropagation();
 
     $('.vimeo').fadeIn(1000, function() {
-      $('.vimeo iframe').fadeIn(1000);
+      $('.vimeo iframe').fadeIn("slow");
     });
   });
 
