@@ -32,7 +32,7 @@
 .carousel-inner > .active,
 .carousel-inner > .next,
 .carousel-inner > .prev {
-  display: block;
+  display: table !important;
 }
 .carousel-inner > .active {
   left: 0;
@@ -87,12 +87,12 @@
   opacity: 1;
   filter: alpha(opacity=99);
 }
- 
- 
+
+
 .carousel-caption {
 
 }
- 
+
 @media screen and (min-width: 768px) {
   .carousel-control .glyphicon-chevron-left,
   .carousel-control .glyphicon-chevron-right,
@@ -105,9 +105,7 @@
     font-size: 30px;
   }
   .carousel-caption {
-    left: 20%;
-    right: 20%;
-    padding-bottom: 30px;
+
   }
   .carousel-indicators {
     bottom: 20px;

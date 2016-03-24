@@ -13,8 +13,8 @@ $use-rem: true !global; // use rem as default unit?
 $use-em: false !global; // use em as default unit?
 $use-percent: true !global; // use percentage as default unit?
 $use-px-fallback: true !global; // allow for pixel fall back
- 
- 
+
+
 
 // GRID
 // $base-width: 960px !global;  // The overall width of the grid (.container)
@@ -36,4 +36,3 @@ $max: "max-width";
 // ------ CHANGE MAY CAUSE UNDESIRED RESULTS
 $base-font-size: $base__font-size !global; // the font size in the html element so we can use ems and rems in a friendly way
 $use-new-grid: true !global; // Uses the new grid released in Skeleton CSS 2
-

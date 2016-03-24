@@ -6,8 +6,14 @@ get_header(); ?>
 <main id="main" class="site-main" role="main">
 
     <!-- /////////HOME PANEL////////////// -->
-    <div class="home-panel" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/home-bg.jpg');">
 
+    <?php
+
+    $image = get_field('background_image');
+
+    ?>
+
+    <div class="home-panel" style="background-image: url('<?php echo $image['sizes']['background-fullscreen'] ?>');">
         <div class="container">
             <div class="row">
                 <div class="twelve columns home-logo center">
@@ -24,7 +30,7 @@ get_header(); ?>
     </div>
 
     <div class="vimeo">
-      <iframe src="https://player.vimeo.com/video/101111912" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <iframe src="https://player.vimeo.com/video/<?php echo get_field('vimeo_id'); ?>" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen ></iframe>
     </div>
 
 
@@ -34,65 +40,49 @@ get_header(); ?>
       <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
 
-            <!-- First slide -->
-            <div class="item active" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/bongo.jpg');">
-              <div class="carousel-caption">
-                <h4 data-animation="animated fadeInDown">
-                  I never realized that there was a place where people lived that wasn’t so much about what you had; everyone’s living in tents, hanging out together and being communal and really enjoying living everyday.
-                </h4>
-                <hr data-animation="animated zoomInUp">
-                <h2 data-animation="animated flipInY">
-                  Bongo
-                </h2>
-                <p  data-animation="animated rotateIn"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-cara.png" alt=""></p>
-                <button data-animation="animated flipInX">Watch Bongo In Action</button>
-              </div>
-            </div><!-- /.item -->
+          <?php
 
-            <!-- Second slide -->
-             <div class="item" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/bongo.jpg');">
-              <div class="carousel-caption">
-                <h4 data-animation="animated fadeInDown">
-                  I never realized that there was a place where people lived that wasn’t so much about what you had; everyone’s living in tents, hanging out together and being communal and really enjoying living everyday.
-                </h4>
-                <hr data-animation="animated zoomInUp">
-                <h2 data-animation="animated flipInY">
-                  Bongo
-                </h2>
-                <p  data-animation="animated rotateIn"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-cara.png" alt=""></p>
-                <button data-animation="animated flipInX">Watch Bongo In Action</button>
-              </div>
-            </div><!-- /.item -->
+          // The Query
+          $the_query = new WP_Query( array( 'post_type' => 'page' ) );
 
-            <!-- Third slide -->
-            <div class="item" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/bongo.jpg');">
-              <div class="carousel-caption">
-                <h4 data-animation="animated fadeInDown">
-                  I never realized that there was a place where people lived that wasn’t so much about what you had; everyone’s living in tents, hanging out together and being communal and really enjoying living everyday.
-                </h4>
-                <hr data-animation="animated zoomInUp">
-                <h2 data-animation="animated flipInY">
-                  Bongo
-                </h2>
-                <p  data-animation="animated rotateIn"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-cara.png" alt=""></p>
-                <button data-animation="animated flipInX">Watch Bongo In Action</button>
-              </div>
-            </div><!-- /.item -->
+            // The Loop
+            if ( $the_query->have_posts() ) {
 
-            <!-- Fourth slide -->
-            <div class="item" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/bongo.jpg');">
-              <div class="carousel-caption">
-                <h4 data-animation="animated fadeInDown">
-                  I never realized that there was a place where people lived that wasn’t so much about what you had; everyone’s living in tents, hanging out together and being communal and really enjoying living everyday.
-                </h4>
-                <hr data-animation="animated zoomInUp">
-                <h2 data-animation="animated flipInY">
-                  Bongo
-                </h2>
-                <p  data-animation="animated rotateIn"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-cara.png" alt=""></p>
-                <button data-animation="animated flipInX">Watch Bongo In Action</button>
-              </div>
-            </div><!-- /.item -->
+            while ( $the_query->have_posts() ) {
+              $the_query->the_post();
+              ?>
+
+              <?php if (get_the_id() != 5) { ?>
+
+                <div class="item <?php if( $the_query->current_post == 0 && !is_paged() ) { ?>active<?php } ?>" style="background-image: url('<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_id())); ?>');">
+                  <div class="carousel-caption">
+                    <div class="carousel-caption-container">
+                      <h4 data-animation="animated fadeInDown">
+                        <?php the_content(); ?>
+                      </h4>
+                      <hr data-animation="animated zoomInUp">
+                      <h2 data-animation="animated flipInY">
+                        <?php the_title(); ?>
+                      </h2>
+                      <p  data-animation="animated rotateIn"><img src="<?php echo get_field('icon')['sizes']['large']; ?>" alt=""></p>
+                      <a href="<?php echo get_permalink(); ?>"><button data-animation="animated flipInX"><?php echo get_field('call_to_action') ?></button></a>
+                    </div>
+                  </div>
+                </div>
+
+              <?php } ?>
+
+              <?php
+            }
+
+            } else {
+            // no posts found
+            }
+
+          /* Restore original Post Data */
+          wp_reset_postdata();
+
+          ?>
 
         </div><!-- /.carousel-inner -->
 
@@ -116,18 +106,40 @@ get_header(); ?>
         <div class="container">
             <div class="row">
                 <div class="four columns offset-by-four">
-                    <h2 class="akula">How Wild Are You?</h2>
+                    <h2 class="akula"><?php echo get_field('panel_title'); ?></h2>
                 </div>
                 <div class="eight columns offset-by-two">
-                    <p>Enter to win a 3-day all-inclusive West Virginia adventure vacation for four people, plus gear, beer, and shirts on your backs. </p>
+                    <p><?php echo get_field('panel_description'); ?></p>
                 </div>
             </div>
 
             <div class="row">
-                <div class="three columns"><img src="<?php echo get_template_directory_uri(); ?>/img/zipline.png" alt=""></div>
-                <div class="three columns"><img src="<?php echo get_template_directory_uri(); ?>/img/zipline.png" alt=""></div>
-                <div class="three columns"><img src="<?php echo get_template_directory_uri(); ?>/img/zipline.png" alt=""></div>
-                <div class="three columns"><img src="<?php echo get_template_directory_uri(); ?>/img/zipline.png" alt=""></div>
+              <?php
+
+                // check if the repeater field has rows of data
+                if( have_rows('panel_images') ):
+
+                 	// loop through the rows of data
+                    while ( have_rows('panel_images') ) : the_row();
+
+                        $image = get_sub_field('panel_image')['sizes']['large'];
+                        ?>
+
+                        <div class="three columns">
+                          <img src="<?php echo $image; ?>" />
+                        </div>
+
+                        <?php
+                    endwhile;
+
+                else :
+
+                    // no rows found
+
+                endif;
+
+              ?>
+
             </div>
 
         </div>
@@ -206,14 +218,32 @@ get_header(); ?>
 
     <!-- /////////CAROUSEL PANEL////////////// -->
     <div id="bottom-carousel">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/small-carousel.png" alt="">
-    </div><!-- /.carousel-inner -->
+
+      <?php
+
+        // check if the repeater field has rows of data
+        if( have_rows('bottom_carousel_images') ):
+
+          // loop through the rows of data
+            while ( have_rows('bottom_carousel_images') ) : the_row();
+
+                $image = get_sub_field('bottom_carousel_image')['sizes']['large'];
+                ?>
+
+                <img src="<?php echo $image; ?>" />
+
+                <?php
+            endwhile;
+
+        else :
+
+            // no rows found
+
+        endif;
+
+      ?>
+
+    </div>
 
         <!-- Controls -->
     <!--    <a class="left carousel-control" href="#bottom-carousel"
@@ -227,8 +257,13 @@ get_header(); ?>
             <span class="sr-only">Next</span>
         </a> -->
 
-    <div class="footer-parrallax" data-parallax="scroll" data-image-src="<?php echo get_template_directory_uri(); ?>/img/group.jpg">
+    <?php
 
+      $i = get_field('big_bottom_image')['sizes']['background-fullscreen'];
+
+    ?>
+
+    <div class="footer-parrallax" data-parallax="scroll" data-image-src="<?php echo $i; ?>">
     </div>
 
 

@@ -10,27 +10,32 @@
     display: table;
     width: 100%;
     top: 0px;
-
-
     margin-bottom: 30px;
-
-
-
-    .home-logo{
-		 margin: calc(15vh) 0 0 0;
-    }
-    .home-play-btn{
-		 margin: 10px 0 0 0;
-     cursor: pointer;
-    }
-    .home-callout{
-    	margin: 100px 0 0 0;
-
-    	a:hover{
-    		opacity: 0.7
-    	}
-    }
 }
+
+.home-logo{
+ margin: calc(15vh) 0 0 0;
+}
+.home-play-btn{
+ margin: 10px 0 0 0;
+
+
+ img {
+   cursor: pointer;
+
+   &:hover {
+     opacity: 0.7;
+   }
+ }
+}
+.home-callout{
+  margin: 100px 0 0 0;
+
+  a:hover{
+    opacity: 0.7
+  }
+}
+
 
 .vimeo {
   position: absolute;
@@ -39,10 +44,13 @@
   right: 0;
   display: none;
   background-color: black;
+  width: 100%;
+  height: 100vh;
 
   iframe {
     width: 100%;
     height: 100vh;
+    display: none;
   }
 }
 
@@ -66,25 +74,19 @@
 
 #home-carousel.carousel .item {
 	min-height: 350px;
-	height:  100vh;
 	width:100%;
 	background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  background-position: center;
+  background-size: cover;
+  display: none;
+  height: 100vh;
 }
 
 .carousel-caption{
-	width: 600px;
-	margin: 0 auto;
-	position: absolute;
-
-	top: 35vh;
-	z-index: 10;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	color: #fff;
 	text-align: center;
-
+  display: table-cell;
+  vertical-align: middle;
+  padding: 70px 0;
 
 	h4{
 		margin:0;
@@ -93,10 +95,11 @@
 		font-weight: 500;
 		letter-spacing: 0.1em;
 		padding: 0 0 20px 0;
+    text-transform: uppercase;
 	}
 
 	hr{
-   	 	width: 300px;
+   	 	max-width: 300px;
     	border-bottom: 1px solid $white;
 
 	}
@@ -155,6 +158,15 @@
 
 }
 
+.carousel-caption-container {
+  max-width: 600px;
+  margin: auto;
+
+  @include mq($mobile-landscape-width, 'max-width') {
+    max-width: 200px;
+  }
+}
+
 // ==========================================================================
 // FOUR IMG PANEL
 // ==========================================================================
@@ -192,7 +204,7 @@
 // ==========================================================================
 
 .email-signup{
-	padding: 30px 0 40px 0;
+	padding: 30px 0 0 0;
 	background-color: $blue;
 	width: 100%;
 	text-align: center;
@@ -211,7 +223,7 @@
 	}
 
 	form.left-offset{
-		margin-left: 20px;
+		// margin-left: 20px;
 	}
 
 	fieldset{
@@ -279,11 +291,12 @@
 		color: #494848;
 		text-transform: uppercase;
 		letter-spacing: .15em;
-
+    display: inline-block;
 
 		.left{
 			width: 650px;
 			padding-left: 30px;
+      padding-right: 30px;
 			text-align: left;
 			float: left;
 			@include mq($tablet-width, "max-width") {
@@ -292,6 +305,7 @@
 		}
 		.right{
 			float: right;
+      padding-left: 30px;
 			padding-right: 30px;
 			display: inline;
 			text-align: right;
@@ -317,12 +331,15 @@
 // BOTTOM CAROUSEL
 // ==========================================================================
 
-
 #bottom-carousel
 {
 	width:100%;
-	height: 330px;
 	position: relative;
+}
+
+.scrollWrapper {
+  width: 100%;
+  position: relative;
   overflow: hidden;
 }
 
@@ -349,5 +366,114 @@
 
 .footer-parrallax{
 	min-height: 90vh;
-    background: transparent;
+  background: transparent;
+}
+
+footer {
+  background-color: #131313;
+
+  p {
+    font-family: $font-family--tertiary;
+    color: #aaaeaf;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+  }
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.logo-1, .logo-3 {
+  padding-top: 10px;
+}
+
+.site-footer {
+  padding: 35px 0 10px;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+.social-icons-container {
+  display: inline;
+  position: absolute;
+  right: 20px;
+  bottom: 30px;
+  font-size: 24px;
+
+  @include mq($desktop-width, "max-width") {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding-bottom: 25px;
+    right: initial;
+    bottom: initial;
+  }
+}
+
+.interior-header {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  display: none;
+}
+
+.interior-header-item {
+  text-align: center;
+  padding: 60px 0;
+
+  @include mq($tablet-width, 'max-width') {
+    padding: 10px 0;
+  }
+
+  a {
+    color: #fcb040;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+.interior-logo {
+  padding: 20px;
+}
+
+.interior-carousel {
+  margin: 15px 0;
+}
+
+.interior-email {
+  margin-bottom: 15px;
+}
+
+.adventurers {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  float: left;
+}
+
+.adventurer {
+  width: 33.3333333%;
+  float: left;
+  position: relative;
+
+  @include mq($desktop-width, "max-width") {
+    width: 100%;
+  }
+
+  .carousel-caption {
+    display: block;
+  }
+
+  .carousel-caption-container {
+    padding: 0 30px;
+
+    hr {
+      margin-bottom: 30px;
+    }
+  }
 }

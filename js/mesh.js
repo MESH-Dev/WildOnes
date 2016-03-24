@@ -1,10 +1,21 @@
 jQuery(document).ready(function($){
 
 
-  $(".home-play-btn").click(function() {
-    $('.vimeo').fadeIn(2000, function() {
-      $('.vimeo iframe').fadeIn(2000);
+  $(".home-play-btn").click(function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    $('.vimeo').fadeIn(1000, function() {
+      $('.vimeo iframe').fadeIn("slow");
     });
+  });
+
+  $('.vimeo').click(function(e) {
+    e.stopPropagation();
+  });
+
+  $(document).click(function() {
+    $('.vimeo').fadeOut();
   });
 
     //Function to animate slider captions
@@ -43,8 +54,22 @@ jQuery(document).ready(function($){
     });
 
 
-    $("#bottom-carousel").smoothDivScroll({
-
+    jQuery("#bottom-carousel").smoothDivScroll({
+      hotSpotScrolling: false,
+			touchScrolling: true
     });
+
+    jQuery(document).scroll(function(){
+      if(jQuery(this).scrollTop() > 5) {
+        jQuery('.interior-header').show();
+        jQuery('.interior-header').addClass('slideInDown');
+        jQuery('.interior-header').removeClass('slideOutUp');
+      } else {
+        jQuery('.interior-header').removeClass('slideInDown');
+        jQuery('.interior-header').addClass('slideOutUp');
+      }
+    });
+
+
 
 });
