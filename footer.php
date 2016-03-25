@@ -6,17 +6,17 @@
 		<div class="row">
 			<div class="two columns offset-by-two">
 				<div class="logo-container logo-1">
-					<img src="<?php echo get_template_directory_uri(); ?>/img/keen_logo.png" />
+					<a href="http://www.keenfootwear.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/keen_logo.png" /></a>
 				</div>
 			</div><!-- End of Footer -->
 			<div class="four columns">
 				<div class="logo-container">
-					<img src="<?php echo get_template_directory_uri(); ?>/img/aotg_logo.png" />
+					<a href="https://www.adventuresonthegorge.com/"  target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/aotg_logo.png" /></a>
 				</div>
 			</div>
 			<div class="two columns">
-				<div class="logo-container">
-					<img src="<?php echo get_template_directory_uri(); ?>/img/waterstonia_logo.png" />
+				<div class="logo-container logo-3">
+					<a href="http://www.waterstoneoutdoors.com/"  target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/waterstonia_logo.png" /></a>
 				</div>
 			</div>
 		</div>
@@ -30,11 +30,11 @@
 	</div>
 
 	<div class="social-icons-container">
-		<a href=""><i class="fa fa-facebook"></i></a>
-		<a href=""><i class="fa fa-pinterest"></i></a>
-		<a href=""><i class="fa fa-youtube"></i></a>
-		<a href=""><i class="fa fa-vimeo"></i></a>
-		<a href=""><i class="fa fa-instagram"></i></a>
+		<a href="https://www.facebook.com/AdventuresOnTheGorge" target="_blank"><i class="fa fa-facebook"></i></a>
+		<a href="https://www.pinterest.com/onthegorge/" target="_blank"><i class="fa fa-pinterest"></i></a>
+		<a href="https://www.youtube.com/user/AdventuresOnTheGorge" target="_blank"><i class="fa fa-youtube"></i></a>
+		<a href="https://vimeo.com/onthegorge" target="_blank"><i class="fa fa-vimeo"></i></a>
+		<a href="https://www.instagram.com/onthegorge/" target="_blank"><i class="fa fa-instagram"></i></a>
 	</div>
 
 </footer>
@@ -47,6 +47,7 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/mousewheel.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/parrallax.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.kinetic.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/froogaloop.js"></script>
 
 </body>
 </html>

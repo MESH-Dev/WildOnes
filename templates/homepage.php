@@ -23,14 +23,14 @@ get_header(); ?>
                     <div id="home-play-btn"><img src="<?php echo get_template_directory_uri(); ?>/img/play-btn.png" alt="The WildOnes" /></div>
                 </div>
                 <div class="twelve columns home-callout center">
-                    <h3><a href="#">Adventures on the Gorge</a></h3>
+                    <h3><a href="https://www.adventuresonthegorge.com/" target="_blank">Adventures on the Gorge</a></h3>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="vimeo">
-      <iframe src="https://player.vimeo.com/video/<?php echo get_field('vimeo_id'); ?>" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen ></iframe>
+      <iframe src="https://player.vimeo.com/video/<?php echo get_field('vimeo_id'); ?>" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen id="video"></iframe>
     </div>
 
 
@@ -205,10 +205,10 @@ get_header(); ?>
 
         <div class="social-text">
             <div class="left">
-                 Follow us on <a href="#">facebook</a>, <a href="#">twitter</a>, & <a href="#">instagram</a> for chances to win whitewater rafting adventures, zip line trips and more.
-            </div>
+                 Follow us on <a href="https://www.facebook.com/AdventuresOnTheGorge" target="_blank">facebook</a>, <a href="https://twitter.com/onthegorge" target="_blank">twitter</a>, & <a href="https://www.instagram.com/onthegorge/" target="_blank">instagram</a> for chances to win whitewater rafting adventures, zip line trips and more.
+          </div>
             <div class="right">
-                Read the <a href="#">sweepstakes rules.</a>
+                Read the <a href="https://atog-meshdesign.c9users.io/wp-content/uploads/2016/03/2016-sweepstakes-rules.pdf" target="_blank">sweepstakes rules.</a>
             </div>
 
         </div>
@@ -227,7 +227,7 @@ get_header(); ?>
           // loop through the rows of data
             while ( have_rows('bottom_carousel_images') ) : the_row();
 
-                $image = get_sub_field('bottom_carousel_image')['sizes']['large'];
+                $image = get_sub_field('bottom_carousel_image')['sizes']['slidersmall'];
                 ?>
 
                 <img src="<?php echo $image; ?>" />

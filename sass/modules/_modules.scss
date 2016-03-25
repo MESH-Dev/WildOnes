@@ -96,6 +96,13 @@
 		letter-spacing: 0.1em;
 		padding: 0 0 20px 0;
     text-transform: uppercase;
+    
+    @include mq($mobile-landscape-width, 'max-width') {
+	    font-size: em(15);
+		line-height: em(15);
+	    
+	  }
+    
 	}
 
 	hr{
@@ -104,7 +111,9 @@
 
 	}
 	p{
-
+		img{
+			max-width: 48px;
+		}
 	}
 
 	h2{
@@ -130,6 +139,8 @@
 			color: white;
 			background-color:rgba(0,0,0,0.2);
 		}
+		
+		
 
 	}
 
@@ -163,7 +174,8 @@
   margin: auto;
 
   @include mq($mobile-landscape-width, 'max-width') {
-    max-width: 200px;
+    max-width: 250px;
+    
   }
 }
 
@@ -386,6 +398,7 @@ footer {
 
 .logo-1, .logo-3 {
   padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .site-footer {

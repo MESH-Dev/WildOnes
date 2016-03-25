@@ -70,6 +70,17 @@ jQuery(document).ready(function($){
       }
     });
 
+  var iframe = document.getElementById('video');
 
+  // $f == Froogaloop
+  var player = $f(iframe);
+  
+  var playButton = document.getElementById("home-play-btn");
+  playButton.addEventListener("click", function() {
+    player.api("play");
+  });
+ 
 
 });
+
+
