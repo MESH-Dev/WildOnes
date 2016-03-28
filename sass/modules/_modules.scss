@@ -236,7 +236,7 @@
 }
 
 // ==========================================================================
-// FOUR IMG PANEL
+// EMAIL SIGN UP PANEL
 // ==========================================================================
 
 .email-signup{
@@ -244,6 +244,10 @@
 	background-color: $blue;
 	width: 100%;
 	text-align: center;
+	
+	.container{
+		min-height: 265px;
+	}
 
 	h2{
 		margin: 0;
@@ -272,7 +276,7 @@
 		display: none
 	}
 
-	input[type="text"]{
+	input[type="text"], input[type="email"]{
 		margin-bottom: 4px;
 		padding: 20px 15px 20px 15px;
 		color: $black;
@@ -358,6 +362,23 @@
 			color: $orange;
 		}
 	}
+	
+	p{
+		font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    
+   
+	}
+	
+	#thank-you{
+		display:none;
+	}
+	
+	 .black{
+    	color:$black;
+    }
 
 
 

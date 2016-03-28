@@ -157,7 +157,7 @@ get_header(); ?>
 
              <div class="row">
                 <div class="eight columns offset-by-two ">
-                    <form class="left-offset">
+                    <form id="email_signup" class="left-offset">
                         <fieldset>
 
                         <legend>Email Sign Up</legend>
@@ -165,28 +165,28 @@ get_header(); ?>
                         <div class="form-group">
                             <label for="First Name">First Name</label>
                             <div class="three columns ">
-                                <input id="FirstName" name="First Name" type="text" placeholder="First Name"  class="" >
+                                <input id="FirstName" name="First Name" type="text" placeholder="First Name"  class="" required>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="Last Name">Last Name</label>
                             <div class="three columns">
-                                <input id="LastName" name="Last Name" type="text" placeholder="Last Name" class=" ">
+                                <input id="LastName" name="Last Name" type="text" placeholder="Last Name" class=" " required>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="Zip Code">Zip Code</label>
                             <div class="two columns ">
-                                <input id="ZipCode" name="Zip Code" type="text" placeholder="Zip Code" class=" ">
+                                <input id="ZipCode" name="Zip Code" type="text" placeholder="Zip Code" class=" " >
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="Email">Email</label>
                             <div class="eight columns ">
-                                <input id="Email" name="Email" type="text" placeholder="Email" class="email">
+                                <input id="Email" name="Email" type="email" placeholder="Email" class="email" required>
                             </div>
                         </div>
 
@@ -199,6 +199,12 @@ get_header(); ?>
 
                         </fieldset>
                     </form>
+                    
+                    <div id="thank-you" class="thanks">
+                       <p>Oh, you <em>are</em> a wild one, aren’t you? Okay, let’s see how this plays out. We’ll announce our grand prize winner via social and email on <span class="black">Tuesday, May 3</span>, so stay tuned.</p>
+                    </div>
+                    
+                    
                 </div>
             </div>
         </div> <!-- .container -->

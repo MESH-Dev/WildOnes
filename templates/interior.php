@@ -224,7 +224,7 @@ get_header(); ?>
                       <div class="form-group">
                           <label for="sumit">Submit</label>
                           <div class="eight columns ">
-                              <button id="sumit" name="sumit" class="submit">Sieze the Moment</button>
+                              <button id="sumit" name="sumit" class="submit">Seize the Moment</button>
                           </div>
                       </div>
 

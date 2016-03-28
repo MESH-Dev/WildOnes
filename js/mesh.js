@@ -1,5 +1,44 @@
 jQuery(document).ready(function($){
   
+  
+  	$("#email_signup").submit(function(e){
+		e.preventDefault();
+
+ 
+		var fname =  $("input#FirstName").val();
+		var lname =  $("input#LastName").val();
+		var zip =  $("input#ZipCode").val();
+		var	email = $("input#Email").val();
+ 
+		$.ajax({
+			type: "POST",
+			url: ajaxurl,
+			data: {
+				email:email,
+				fname:fname,
+				lname:lname,
+				zip:zip,
+				action:'email_signup'
+			},
+			success: function(response) {
+			 var test = response;
+			  if(test.indexOf('wild')>-1){
+			    $('#thank-you').hide();
+			     $('#thank-you').html(response);
+			    $("#email_signup").fadeOut().next('#thank-you').delay(500).fadeIn();
+			   
+			  }
+			  else{
+			    $('#thank-you').hide();
+			    $('#thank-you').html(response);
+  			  $('#thank-you').fadeIn();
+  		  }
+			}
+ 
+		});
+	});
+  
+  
   jQuery("#bottom-carousel").smoothDivScroll({
       hotSpotScrolling: false,
 			touchScrolling: true
