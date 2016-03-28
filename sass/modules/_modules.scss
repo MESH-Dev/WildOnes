@@ -68,6 +68,15 @@
 .carousel-control.right{
 	background-image: url("img/arrow-right.png");
 	background-repeat: no-repeat;
+	@include mq($tablet-width, 'max-width') {
+		right: 0px;
+	}
+}
+
+.carousel-control{
+	@include mq($tablet-width, 'max-width') {
+		top: 145px;
+	}
 }
 
 .sr-only{display: none;}
@@ -80,6 +89,14 @@
   background-size: cover;
   display: none;
   height: 100vh;
+  background-color: black;
+  
+  @include mq($tablet-width, 'max-width') {
+		width:100%;
+		height: auto;
+ 
+		background-position: center;
+	}
 }
 
 .carousel-caption{
@@ -99,15 +116,22 @@
     
     @include mq($mobile-landscape-width, 'max-width') {
 	    font-size: em(15);
-		line-height: em(15);
+			line-height: em(15);
+			display: none;
 	    
 	  }
-    
+	    @include mq($tablet-width, 'max-width') {
+				display: none;
+			}
+		    
 	}
 
 	hr{
    	 	max-width: 300px;
     	border-bottom: 1px solid $white;
+    	 @include mq($tablet-width, 'max-width') {
+				display: none;
+			}
 
 	}
 	p{
@@ -121,7 +145,7 @@
 		font-family: $font-family--secondary;
 		font-size: 32px;
 		letter-spacing: 0.7em;
-		padding: 0 0 15px 0;
+		padding: 0 0 15px 15px;
 	}
 
 	button {
@@ -347,6 +371,8 @@
 {
 	width:100%;
 	position: relative;
+	background-color: $white;
+	padding: 10px 0 10px 0;
 }
 
 .scrollWrapper {
@@ -414,6 +440,14 @@ footer {
   right: 20px;
   bottom: 30px;
   font-size: 24px;
+  a{
+  	color: $blue;
+  	
+  	&:hover{
+  		opacity: 1;
+  		color: $orange;
+  	}
+  }
 
   @include mq($desktop-width, "max-width") {
     position: relative;

@@ -4058,13 +4058,26 @@ footer p {
   background-image: url("img/arrow-right.png");
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 768px) {
+  /* line 68, sass/modules/_modules.scss */
+  .carousel-control.right {
+    right: 0px;
+  }
+}
 
-/* line 73, sass/modules/_modules.scss */
+@media screen and (max-width: 768px) {
+  /* line 76, sass/modules/_modules.scss */
+  .carousel-control {
+    top: 145px;
+  }
+}
+
+/* line 82, sass/modules/_modules.scss */
 .sr-only {
   display: none;
 }
 
-/* line 75, sass/modules/_modules.scss */
+/* line 84, sass/modules/_modules.scss */
 #home-carousel.carousel .item {
   min-height: 350px;
   width: 100%;
@@ -4073,9 +4086,18 @@ footer p {
   background-size: cover;
   display: none;
   height: 100vh;
+  background-color: black;
+}
+@media screen and (max-width: 768px) {
+  /* line 84, sass/modules/_modules.scss */
+  #home-carousel.carousel .item {
+    width: 100%;
+    height: auto;
+    background-position: center;
+  }
 }
 
-/* line 85, sass/modules/_modules.scss */
+/* line 102, sass/modules/_modules.scss */
 .carousel-caption {
   text-align: center;
   display: table-cell;
@@ -4084,7 +4106,7 @@ footer p {
   /* Animation delays */
   /* Animation delays */
 }
-/* line 91, sass/modules/_modules.scss */
+/* line 108, sass/modules/_modules.scss */
 .carousel-caption h4 {
   margin: 0;
   font-size: 1.25em;
@@ -4095,30 +4117,43 @@ footer p {
   text-transform: uppercase;
 }
 @media screen and (max-width: 480px) {
-  /* line 91, sass/modules/_modules.scss */
+  /* line 108, sass/modules/_modules.scss */
   .carousel-caption h4 {
     font-size: 0.9375em;
     line-height: 0.9375em;
+    display: none;
   }
 }
-/* line 108, sass/modules/_modules.scss */
+@media screen and (max-width: 768px) {
+  /* line 108, sass/modules/_modules.scss */
+  .carousel-caption h4 {
+    display: none;
+  }
+}
+/* line 129, sass/modules/_modules.scss */
 .carousel-caption hr {
   max-width: 300px;
   border-bottom: 1px solid #ffffff;
 }
-/* line 114, sass/modules/_modules.scss */
+@media screen and (max-width: 768px) {
+  /* line 129, sass/modules/_modules.scss */
+  .carousel-caption hr {
+    display: none;
+  }
+}
+/* line 138, sass/modules/_modules.scss */
 .carousel-caption p img {
   max-width: 48px;
 }
-/* line 119, sass/modules/_modules.scss */
+/* line 143, sass/modules/_modules.scss */
 .carousel-caption h2 {
   margin: 0;
   font-family: "akularegular";
   font-size: 32px;
   letter-spacing: 0.7em;
-  padding: 0 0 15px 0;
+  padding: 0 0 15px 15px;
 }
-/* line 127, sass/modules/_modules.scss */
+/* line 151, sass/modules/_modules.scss */
 .carousel-caption button {
   border: 1px solid #000000;
   font-size: 20px;
@@ -4130,64 +4165,64 @@ footer p {
   color: white;
   background-color: rgba(255, 255, 255, 0.2);
 }
-/* line 138, sass/modules/_modules.scss */
+/* line 162, sass/modules/_modules.scss */
 .carousel-caption button:hover {
   color: white;
   background-color: rgba(0, 0, 0, 0.2);
 }
-/* line 149, sass/modules/_modules.scss */
+/* line 173, sass/modules/_modules.scss */
 .carousel-caption h4 {
   -webkit-animation-delay: .5s;
   animation-delay: .5s;
 }
-/* line 153, sass/modules/_modules.scss */
+/* line 177, sass/modules/_modules.scss */
 .carousel-caption hr {
   -webkit-animation-delay: .5s;
   animation-delay: .5s;
 }
-/* line 157, sass/modules/_modules.scss */
+/* line 181, sass/modules/_modules.scss */
 .carousel-caption h2 {
   -webkit-animation-delay: 1.5s;
   animation-delay: 1.5s;
 }
-/* line 161, sass/modules/_modules.scss */
+/* line 185, sass/modules/_modules.scss */
 .carousel-caption p {
   -webkit-animation-delay: 1.75s;
   animation-delay: 1.75s;
 }
-/* line 165, sass/modules/_modules.scss */
+/* line 189, sass/modules/_modules.scss */
 .carousel-caption button {
   -webkit-animation-delay: 2s;
   animation-delay: 2s;
 }
 
-/* line 172, sass/modules/_modules.scss */
+/* line 196, sass/modules/_modules.scss */
 .carousel-caption-container {
   max-width: 600px;
   margin: auto;
 }
 @media screen and (max-width: 480px) {
-  /* line 172, sass/modules/_modules.scss */
+  /* line 196, sass/modules/_modules.scss */
   .carousel-caption-container {
     max-width: 250px;
   }
 }
 
-/* line 186, sass/modules/_modules.scss */
+/* line 210, sass/modules/_modules.scss */
 .four-imgs {
   padding: 30px 0 40px 0;
   background-color: #000000;
   width: 100%;
   text-align: center;
 }
-/* line 194, sass/modules/_modules.scss */
+/* line 218, sass/modules/_modules.scss */
 .four-imgs h2 {
   margin: 0;
   color: #ffffff;
   padding: 0 10px 10px 10px;
   border-bottom: 1px solid #ffffff;
 }
-/* line 201, sass/modules/_modules.scss */
+/* line 225, sass/modules/_modules.scss */
 .four-imgs p {
   padding: 25px 0px 0px 0px;
   font-size: 20px;
@@ -4195,39 +4230,39 @@ footer p {
   font-weight: 700;
   letter-spacing: .05em;
 }
-/* line 208, sass/modules/_modules.scss */
+/* line 232, sass/modules/_modules.scss */
 .four-imgs img {
   padding-bottom: 20px;
 }
 
-/* line 218, sass/modules/_modules.scss */
+/* line 242, sass/modules/_modules.scss */
 .email-signup {
   padding: 30px 0 0 0;
   background-color: #74c4d6;
   width: 100%;
   text-align: center;
 }
-/* line 224, sass/modules/_modules.scss */
+/* line 248, sass/modules/_modules.scss */
 .email-signup h2 {
   margin: 0;
   color: #000000;
   padding: 0 10px 20px 10px;
 }
-/* line 232, sass/modules/_modules.scss */
+/* line 256, sass/modules/_modules.scss */
 .email-signup .form-group .columns {
   margin: 0 2px 0 2px;
 }
-/* line 241, sass/modules/_modules.scss */
+/* line 265, sass/modules/_modules.scss */
 .email-signup fieldset {
   margin: 0;
   padding: 0;
   border: 0;
 }
-/* line 247, sass/modules/_modules.scss */
+/* line 271, sass/modules/_modules.scss */
 .email-signup label, .email-signup legend {
   display: none;
 }
-/* line 251, sass/modules/_modules.scss */
+/* line 275, sass/modules/_modules.scss */
 .email-signup input[type="text"] {
   margin-bottom: 4px;
   padding: 20px 15px 20px 15px;
@@ -4239,23 +4274,23 @@ footer p {
   font-weight: 800;
   letter-spacing: .15em;
 }
-/* line 263, sass/modules/_modules.scss */
+/* line 287, sass/modules/_modules.scss */
 .email-signup input.email {
   width: 668px;
 }
 @media only screen and (min-width: 768px) and (max-width: 1079px) {
-  /* line 263, sass/modules/_modules.scss */
+  /* line 287, sass/modules/_modules.scss */
   .email-signup input.email {
     width: 460px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 263, sass/modules/_modules.scss */
+  /* line 287, sass/modules/_modules.scss */
   .email-signup input.email {
     width: 100%;
   }
 }
-/* line 274, sass/modules/_modules.scss */
+/* line 298, sass/modules/_modules.scss */
 .email-signup button.submit {
   width: 668px;
   font-size: 20px;
@@ -4268,22 +4303,22 @@ footer p {
   float: left;
 }
 @media only screen and (min-width: 768px) and (max-width: 1079px) {
-  /* line 274, sass/modules/_modules.scss */
+  /* line 298, sass/modules/_modules.scss */
   .email-signup button.submit {
     width: 460px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 274, sass/modules/_modules.scss */
+  /* line 298, sass/modules/_modules.scss */
   .email-signup button.submit {
     width: 100%;
   }
 }
-/* line 291, sass/modules/_modules.scss */
+/* line 315, sass/modules/_modules.scss */
 .email-signup button.submit:hover {
   background-color: #fcb040;
 }
-/* line 297, sass/modules/_modules.scss */
+/* line 321, sass/modules/_modules.scss */
 .email-signup .social-text {
   width: 100%;
   padding: 40px 0 20px 0;
@@ -4295,7 +4330,7 @@ footer p {
   letter-spacing: .15em;
   display: inline-block;
 }
-/* line 308, sass/modules/_modules.scss */
+/* line 332, sass/modules/_modules.scss */
 .email-signup .social-text .left {
   width: 650px;
   padding-left: 30px;
@@ -4304,12 +4339,12 @@ footer p {
   float: left;
 }
 @media screen and (max-width: 768px) {
-  /* line 308, sass/modules/_modules.scss */
+  /* line 332, sass/modules/_modules.scss */
   .email-signup .social-text .left {
     width: 100%;
   }
 }
-/* line 318, sass/modules/_modules.scss */
+/* line 342, sass/modules/_modules.scss */
 .email-signup .social-text .right {
   float: right;
   padding-left: 30px;
@@ -4318,7 +4353,7 @@ footer p {
   text-align: right;
 }
 @media screen and (max-width: 768px) {
-  /* line 318, sass/modules/_modules.scss */
+  /* line 342, sass/modules/_modules.scss */
   .email-signup .social-text .right {
     width: 100%;
     float: left;
@@ -4327,26 +4362,28 @@ footer p {
     padding-left: 30px;
   }
 }
-/* line 332, sass/modules/_modules.scss */
+/* line 356, sass/modules/_modules.scss */
 .email-signup .social-text a:hover {
   opacity: 1;
   color: #fcb040;
 }
 
-/* line 346, sass/modules/_modules.scss */
+/* line 370, sass/modules/_modules.scss */
 #bottom-carousel {
   width: 100%;
   position: relative;
+  background-color: #ffffff;
+  padding: 10px 0 10px 0;
 }
 
-/* line 352, sass/modules/_modules.scss */
+/* line 378, sass/modules/_modules.scss */
 .scrollWrapper {
   width: 100%;
   position: relative;
   overflow: hidden;
 }
 
-/* line 358, sass/modules/_modules.scss */
+/* line 384, sass/modules/_modules.scss */
 #bottom-carousel div.scrollableArea img {
   position: relative;
   float: left;
@@ -4362,17 +4399,17 @@ footer p {
   user-select: none;
 }
 
-/* line 379, sass/modules/_modules.scss */
+/* line 405, sass/modules/_modules.scss */
 .footer-parrallax {
   min-height: 90vh;
   background: transparent;
 }
 
-/* line 384, sass/modules/_modules.scss */
+/* line 410, sass/modules/_modules.scss */
 footer {
   background-color: #131313;
 }
-/* line 387, sass/modules/_modules.scss */
+/* line 413, sass/modules/_modules.scss */
 footer p {
   font-family: "Dosis", sans-serif;
   color: #aaaeaf;
@@ -4380,18 +4417,18 @@ footer p {
   letter-spacing: 0.15em;
 }
 
-/* line 395, sass/modules/_modules.scss */
+/* line 421, sass/modules/_modules.scss */
 .logo-container {
   text-align: center;
 }
 
-/* line 399, sass/modules/_modules.scss */
+/* line 425, sass/modules/_modules.scss */
 .logo-1, .logo-3 {
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-/* line 404, sass/modules/_modules.scss */
+/* line 430, sass/modules/_modules.scss */
 .site-footer {
   padding: 35px 0 10px;
   position: relative;
@@ -4399,7 +4436,7 @@ footer p {
   width: 100%;
 }
 
-/* line 411, sass/modules/_modules.scss */
+/* line 437, sass/modules/_modules.scss */
 .social-icons-container {
   display: inline;
   position: absolute;
@@ -4407,8 +4444,17 @@ footer p {
   bottom: 30px;
   font-size: 24px;
 }
+/* line 443, sass/modules/_modules.scss */
+.social-icons-container a {
+  color: #74c4d6;
+}
+/* line 446, sass/modules/_modules.scss */
+.social-icons-container a:hover {
+  opacity: 1;
+  color: #fcb040;
+}
 @media screen and (max-width: 900px) {
-  /* line 411, sass/modules/_modules.scss */
+  /* line 437, sass/modules/_modules.scss */
   .social-icons-container {
     position: relative;
     text-align: center;
@@ -4420,7 +4466,7 @@ footer p {
   }
 }
 
-/* line 429, sass/modules/_modules.scss */
+/* line 463, sass/modules/_modules.scss */
 .interior-header {
   background-color: black;
   position: fixed;
@@ -4430,40 +4476,40 @@ footer p {
   display: none;
 }
 
-/* line 438, sass/modules/_modules.scss */
+/* line 472, sass/modules/_modules.scss */
 .interior-header-item {
   text-align: center;
   padding: 60px 0;
 }
 @media screen and (max-width: 768px) {
-  /* line 438, sass/modules/_modules.scss */
+  /* line 472, sass/modules/_modules.scss */
   .interior-header-item {
     padding: 10px 0;
   }
 }
-/* line 446, sass/modules/_modules.scss */
+/* line 480, sass/modules/_modules.scss */
 .interior-header-item a {
   color: #fcb040;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-/* line 453, sass/modules/_modules.scss */
+/* line 487, sass/modules/_modules.scss */
 .interior-logo {
   padding: 20px;
 }
 
-/* line 457, sass/modules/_modules.scss */
+/* line 491, sass/modules/_modules.scss */
 .interior-carousel {
   margin: 15px 0;
 }
 
-/* line 461, sass/modules/_modules.scss */
+/* line 495, sass/modules/_modules.scss */
 .interior-email {
   margin-bottom: 15px;
 }
 
-/* line 465, sass/modules/_modules.scss */
+/* line 499, sass/modules/_modules.scss */
 .adventurers {
   position: relative;
   z-index: 10;
@@ -4471,27 +4517,27 @@ footer p {
   float: left;
 }
 
-/* line 472, sass/modules/_modules.scss */
+/* line 506, sass/modules/_modules.scss */
 .adventurer {
   width: 33.3333333%;
   float: left;
   position: relative;
 }
 @media screen and (max-width: 900px) {
-  /* line 472, sass/modules/_modules.scss */
+  /* line 506, sass/modules/_modules.scss */
   .adventurer {
     width: 100%;
   }
 }
-/* line 481, sass/modules/_modules.scss */
+/* line 515, sass/modules/_modules.scss */
 .adventurer .carousel-caption {
   display: block;
 }
-/* line 485, sass/modules/_modules.scss */
+/* line 519, sass/modules/_modules.scss */
 .adventurer .carousel-caption-container {
   padding: 0 30px;
 }
-/* line 488, sass/modules/_modules.scss */
+/* line 522, sass/modules/_modules.scss */
 .adventurer .carousel-caption-container hr {
   margin-bottom: 30px;
 }

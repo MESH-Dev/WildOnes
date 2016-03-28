@@ -1,4 +1,9 @@
 jQuery(document).ready(function($){
+  
+  jQuery("#bottom-carousel").smoothDivScroll({
+      hotSpotScrolling: false,
+			touchScrolling: true
+    });
 
 
   $(".home-play-btn").click(function(e) {
@@ -54,10 +59,7 @@ jQuery(document).ready(function($){
     });
 
 
-    jQuery("#bottom-carousel").smoothDivScroll({
-      hotSpotScrolling: false,
-			touchScrolling: true
-    });
+    
 
     jQuery(document).scroll(function(){
       if(jQuery(this).scrollTop() > 5) {
