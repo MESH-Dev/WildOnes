@@ -39,7 +39,7 @@
 
 </footer>
 
-<?php wp_footer(); ?>
+
 
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>
 
@@ -49,6 +49,8 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.kinetic.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/froogaloop.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/waitforimages.js"></script>
+<?php wp_footer(); ?>
 
 </body>
 </html>

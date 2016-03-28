@@ -179,7 +179,7 @@ get_header(); ?>
                         <div class="form-group">
                             <label for="Zip Code">Zip Code</label>
                             <div class="two columns ">
-                                <input id="ZipCode" name="Zip Code" type="text" placeholder="Zip Code" class=" " >
+                                <input id="ZipCode" name="Zip Code" type="text" placeholder="Zip Code" class=" " required>
                             </div>
                         </div>
 
@@ -250,18 +250,7 @@ get_header(); ?>
       ?>
 
     </div>
-
-        <!-- Controls -->
-    <!--    <a class="left carousel-control" href="#bottom-carousel"
-             role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#bottom-carousel"
-             role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a> -->
+ 
 
     <?php
 

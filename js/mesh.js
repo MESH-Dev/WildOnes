@@ -38,11 +38,14 @@ jQuery(document).ready(function($){
 		});
 	});
   
-  
-  jQuery("#bottom-carousel").smoothDivScroll({
+  $('#bottom-carousel').waitForImages(function() {
+     jQuery("#bottom-carousel").smoothDivScroll({
       hotSpotScrolling: false,
 			touchScrolling: true
     });
+  });
+  
+ 
 
 
   $(".home-play-btn").click(function(e) {
