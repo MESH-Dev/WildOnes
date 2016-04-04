@@ -4,7 +4,6 @@ jQuery(document).ready(function($){
   	$("#email_signup").submit(function(e){
 		e.preventDefault();
 
- 
 		var fname =  $("input#FirstName").val();
 		var lname =  $("input#LastName").val();
 		var zip =  $("input#ZipCode").val();
@@ -47,7 +46,7 @@ jQuery(document).ready(function($){
   
  
 
-
+  //vimeo video controls
   $(".home-play-btn").click(function(e) {
     e.preventDefault();
     e.stopPropagation();
@@ -63,7 +62,18 @@ jQuery(document).ready(function($){
 
   $(document).click(function() {
     $('.vimeo').fadeOut();
+    $('.video-social').fadeOut();
   });
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
 
     //Function to animate slider captions
     function doAnimations( elems ) {
@@ -102,17 +112,37 @@ jQuery(document).ready(function($){
 
 
     
-
-    jQuery(document).scroll(function(){
-      if(jQuery(this).scrollTop() > 5) {
+    var width = $( window ).width();
+    if(width > 600){
+      jQuery(document).scroll(function(){
+        if(jQuery(this).scrollTop() > 5) {
+          jQuery('.interior-header').show();
+          jQuery('.interior-header').addClass('slideInDown');
+          jQuery('.interior-header').removeClass('slideOutUp');
+        } else {
+          jQuery('.interior-header').removeClass('slideInDown');
+          jQuery('.interior-header').addClass('slideOutUp');
+        }
+      });
+    }
+  
+    $('#menu-toggle').click(function(){
         jQuery('.interior-header').show();
         jQuery('.interior-header').addClass('slideInDown');
         jQuery('.interior-header').removeClass('slideOutUp');
-      } else {
+        $('#menu-toggle').hide();
+        $('#menu-close').show();
+    });
+    
+     $('#menu-close').click(function(){
         jQuery('.interior-header').removeClass('slideInDown');
         jQuery('.interior-header').addClass('slideOutUp');
-      }
+        $('#menu-close').hide();
+        $('#menu-toggle').show();
     });
+    
+    
+  
 
   var iframe = document.getElementById('video');
 
@@ -123,6 +153,23 @@ jQuery(document).ready(function($){
   playButton.addEventListener("click", function() {
     player.api("play");
   });
+  
+  var playButtonSoc = document.getElementById("home-play-btn-soc");
+  playButtonSoc.addEventListener("click", function() {
+    $('.video-social').fadeOut();
+    player.api("play");
+  });
+ 
+    // When the player is ready/loaded, add a finish event listener
+    player.addEvent('ready', function() {
+        //Adds an event 'finish' that executes a function 'onFinish' when the video has ended.
+        player.addEvent('finish', onFinish);
+    });
+
+    //Define the onFinish function that will be called
+    function onFinish(id) {
+         $('.video-social').fadeIn();
+    }
  
 
 });

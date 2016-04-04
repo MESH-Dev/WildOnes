@@ -27,16 +27,7 @@ register_nav_menus(
     )
 );
 
-// Register Widget Area for the Sidebar
-register_sidebar( array(
-    'name' => __( 'Primary Widget Area', 'Sidebar' ),
-    'id' => 'primary-widget-area',
-    'description' => __( 'The primary widget area', 'Sidebar' ),
-    'before_widget' => '',
-    'after_widget' => '',
-    'before_title' => '<h3>',
-    'after_title' => '</h3>',
-) );
+ 
 
 
 

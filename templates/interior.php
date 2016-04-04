@@ -3,6 +3,9 @@
 */
 get_header(); ?>
 
+<i id="menu-toggle" class="fa fa-bars"></i>
+<i id="menu-close" class="fa fa-close"></i>
+
 <main id="main" class="site-main" role="main">
 
   <!-- /////////HOME PANEL////////////// -->
@@ -99,8 +102,24 @@ get_header(); ?>
   </div><!-- /.carousel -->
 
   <div class="vimeo">
-    <iframe src="https://player.vimeo.com/video/<?php echo get_field('vimeo_id'); ?>" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen ></iframe>
+    <iframe src="https://player.vimeo.com/video/<?php echo get_field('vimeo_id'); ?>?api=1&player_id=video" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen id="video" ></iframe>
   </div>
+  <div class="video-social">
+        <div class="container">
+            <div class="row">
+                <div class="twelve columns center shares">
+                <h2>Share this video:</h2>
+                    <div class="share-vid">
+                        <a href="https://player.vimeo.com/video/<?php echo get_field('vimeo_id'); ?>/share/facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="https://player.vimeo.com/video/<?php echo get_field('vimeo_id'); ?>/share/twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                    </div>
+                    <div class="twelve columns home-play-btn center">
+                        <div id="home-play-btn-soc" class="share-play">Play Again?<br><img src="<?php echo get_template_directory_uri(); ?>/img/play-btn.png" alt="The WildOnes" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
 
   <!-- /////////CAROUSEL PANEL////////////// -->
   <div id="bottom-carousel" class="interior-carousel">
@@ -113,7 +132,7 @@ get_header(); ?>
         // loop through the rows of data
           while ( have_rows('bottom_carousel_images') ) : the_row();
 
-              $image = get_sub_field('bottom_carousel_image')['sizes']['large'];
+              $image = get_sub_field('bottom_carousel_image')['sizes']['slidersmall'];
               ?>
 
               <img src="<?php echo $image; ?>" />
@@ -137,10 +156,10 @@ get_header(); ?>
       <div class="container">
           <div class="row">
               <div class="four columns offset-by-four">
-                  <h2 class="akula"><?php echo get_field('panel_title'); ?></h2>
+                  <h2 class="akula"><?php echo get_field('panel_title',5); ?></h2>
               </div>
               <div class="eight columns offset-by-two">
-                  <p><?php echo get_field('panel_description'); ?></p>
+                  <p><?php echo get_field('panel_description',5); ?></p>
               </div>
           </div>
 
@@ -148,10 +167,10 @@ get_header(); ?>
             <?php
 
               // check if the repeater field has rows of data
-              if( have_rows('panel_images') ):
+              if( have_rows('panel_images',5) ):
 
                 // loop through the rows of data
-                  while ( have_rows('panel_images') ) : the_row();
+                  while ( have_rows('panel_images',5) ) : the_row();
 
                       $image = get_sub_field('panel_image')['sizes']['large'];
                       ?>
@@ -245,7 +264,7 @@ get_header(); ?>
                  Follow us on <a href="https://www.facebook.com/AdventuresOnTheGorge" target="_blank">facebook</a>, <a href="https://twitter.com/onthegorge" target="_blank">twitter</a>, & <a href="https://www.instagram.com/onthegorge/" target="_blank">instagram</a> for chances to win whitewater rafting adventures, zip line trips and more.
           </div>
           <div class="right">
-              Read the <a href="https://atog-meshdesign.c9users.io/wp-content/uploads/2016/03/2016-sweepstakes-rules.pdf" target="_blank">sweepstakes rules.</a>
+              Read the <a href="http://thewildones.us/wp-content/uploads/2016/03/2016-sweepstakes-rules.pdf" target="_blank">sweepstakes rules.</a>
           </div>
 
       </div>
@@ -271,9 +290,15 @@ get_header(); ?>
           $the_query->the_post();
           ?>
 
-          <?php if (get_the_id() != 5 && get_the_id() != $this_id) { ?>
+          <?php if (get_the_id() != 5 && get_the_id() != $this_id) { 
+              $position = 'left';
+              if( get_the_id() == 13 || get_the_id() == 11 )
+                $position = 'right';
+          ?>
+          
+            
 
-          <div class="adventurer" style="background-image: url('<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_id())); ?>');">
+          <div class="adventurer" style="background-image: url('<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_id())); ?>'); background-position: <?php echo $position;?> ">
             <a href="<?php echo get_permalink(); ?>">
               <div class="carousel-caption">
                 <div class="carousel-caption-container">

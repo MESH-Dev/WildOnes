@@ -54,6 +54,46 @@
   }
 }
 
+.video-social{
+	display:none;
+	position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+	width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.8);
+  h2{
+  	text-transform: uppercase;
+  	font-size: 48px;
+  	margin: 0;
+  	padding: 0 0 20px 0;
+  }
+  
+  i{
+  		font-size: 48px;
+  		padding: 0 25px 0 25px;
+  }
+  
+  .share-play
+  {
+  	font-size: 24px;
+  	padding-top: 40px;
+  	img{
+  		padding-top: 20px;
+  	}
+  }
+  
+  .shares{
+	 margin: calc(25vh) 0 0 0;
+	}
+  
+  
+  
+ 
+}
+
 
 
 // ==========================================================================
@@ -128,6 +168,9 @@
 
 	hr{
    	 	max-width: 300px;
+   	 	border-top: none;
+   	 	border-left: none;
+   	 	border-right: none;
     	border-bottom: 1px solid $white;
     	 @include mq($tablet-width, 'max-width') {
 				display: none;
@@ -231,6 +274,13 @@
 	}
 	img{
 		padding-bottom: 20px;
+	}
+	
+	.prizes {
+		p{
+			padding: 0;
+			margin: 0;
+		}
 	}
 
 }
@@ -416,6 +466,12 @@
 	-moz-user-select: none;
 	-o-user-select: none;
 	user-select: none;
+	
+	@include mq($tablet-width, "max-width") {
+  		height: 200px;
+  }
+	
+
 }
 
 
@@ -432,7 +488,7 @@ footer {
   background-color: #131313;
 
   p {
-    font-family: $font-family--tertiary;
+    font-family: $font-family--primary;
     color: #aaaeaf;
     font-size: 13px;
     letter-spacing: 0.15em;
@@ -488,6 +544,9 @@ footer {
   z-index: 10;
   width: 100%;
   display: none;
+  @include mq($tablet-width, "max-width") {
+  	position: absolute;
+  }
 }
 
 .interior-header-item {
@@ -499,7 +558,7 @@ footer {
   }
 
   a {
-    color: #fcb040;
+    color: $white;
     text-transform: uppercase;
     font-weight: bold;
   }
@@ -519,29 +578,70 @@ footer {
 
 .adventurers {
   position: relative;
-  z-index: 10;
+  z-index: 1;
   width: 100%;
   float: left;
+  height: auto;
 }
 
 .adventurer {
   width: 33.3333333%;
   float: left;
   position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 333px;
+  height: auto;
+ 
+  
+  &:hover{
+  	opacity: 0.8;
+  }
 
-  @include mq($desktop-width, "max-width") {
+  @include mq('950px', "max-width") {
     width: 100%;
+    background-position: top !important;
+    min-height: 333px;
   }
 
   .carousel-caption {
     display: block;
+    @include mq('950px', "max-width") {
+	    padding: 12
+	    0px 0 70px 0;
+	  }
+    
   }
 
   .carousel-caption-container {
     padding: 0 30px;
+    @include mq('480px', "max-width") {
+	     max-width: 400px;
+	  }
+       
 
     hr {
       margin-bottom: 30px;
     }
   }
 }
+
+#menu-toggle,#menu-close{
+	display: none;
+	@include mq($tablet-width, "max-width") {
+			display: block;
+	     position: absolute;
+	     top: 15px;
+	     right: 15px;
+	     color: white;
+	     z-index: 10000;
+	     font-size: 30px;
+	     &:hover{
+	     	cursor: pointer;
+	     	opacity: 0.7;
+	     }
+	}
+       
+}
+#menu-close{display:none;}
+

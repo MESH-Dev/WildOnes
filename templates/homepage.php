@@ -30,7 +30,24 @@ get_header(); ?>
     </div>
 
     <div class="vimeo">
-      <iframe src="https://player.vimeo.com/video/<?php echo get_field('vimeo_id'); ?>" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen id="video"></iframe>
+      <iframe src="https://player.vimeo.com/video/<?php echo get_field('vimeo_id'); ?>?api=1&player_id=video" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen id="video"></iframe>
+    </div>
+    
+    <div class="video-social">
+        <div class="container">
+            <div class="row">
+                <div class="twelve columns center shares">
+                <h2>Share this video:</h2>
+                    <div class="share-vid">
+                        <a href="https://player.vimeo.com/video/<?php echo get_field('vimeo_id'); ?>/share/facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="https://player.vimeo.com/video/<?php echo get_field('vimeo_id'); ?>/share/twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                    </div>
+                    <div class="twelve columns home-play-btn center">
+                        <div id="home-play-btn-soc" class="share-play">Play Again?<br><img src="<?php echo get_template_directory_uri(); ?>/img/play-btn.png" alt="The WildOnes" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>    
     </div>
 
 
@@ -43,7 +60,7 @@ get_header(); ?>
           <?php
 
           // The Query
-          $the_query = new WP_Query( array( 'post_type' => 'page' ) );
+          $the_query = new WP_Query( array( 'post_type' => 'page', 'orderby' => 'title', 'order' => 'ASC' ) );
 
             // The Loop
             if ( $the_query->have_posts() ) {
@@ -141,6 +158,12 @@ get_header(); ?>
               ?>
 
             </div>
+            
+            <div class="row">
+                <div class="eight columns offset-by-two prizes">
+                    <p><?php echo get_field('prize_description'); ?></p>
+                </div>
+            </div>
 
         </div>
     </div>
@@ -214,7 +237,7 @@ get_header(); ?>
                  Follow us on <a href="https://www.facebook.com/AdventuresOnTheGorge" target="_blank">facebook</a>, <a href="https://twitter.com/onthegorge" target="_blank">twitter</a>, & <a href="https://www.instagram.com/onthegorge/" target="_blank">instagram</a> for chances to win whitewater rafting adventures, zip line trips and more.
           </div>
             <div class="right">
-                Read the <a href="https://atog-meshdesign.c9users.io/wp-content/uploads/2016/03/2016-sweepstakes-rules.pdf" target="_blank">sweepstakes rules.</a>
+                Read the <a href="http://thewildones.us/wp-content/uploads/2016/03/2016-sweepstakes-rules.pdf" target="_blank">sweepstakes rules.</a>
             </div>
 
         </div>

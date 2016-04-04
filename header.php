@@ -22,8 +22,7 @@
 	<!-- CSS
 	================================================== -->
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-  <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 	<!-- Favicons
 	================================================== -->
@@ -31,10 +30,7 @@
 	<link rel="apple-touch-icon" href="https://www.adventuresonthegorge.com/favicon.ico">
  
 
-	<!-- TypeKit
-	================================================== -->
-	<script src="https://use.typekit.net/cbp4nbv.js"></script>
-	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
 
 	<?php wp_head(); ?>
 
