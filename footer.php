@@ -11,7 +11,7 @@
 			</div><!-- End of Footer -->
 			<div class="four columns">
 				<div class="logo-container">
-					<a href="https://www.adventuresonthegorge.com/"  target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/aotg_logo.png" width="260" /></a>
+					<a href="https://www.adventuresonthegorge.com/?nck=8773816530"  target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/aotg_logo.png" width="260" /></a>
 				</div>
 			</div>
 			<div class="two columns">
@@ -65,7 +65,7 @@
   ga('send', 'pageview');
 
 </script>
- 
+
 
 </body>
 </html>

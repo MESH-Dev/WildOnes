@@ -23,7 +23,7 @@ get_header(); ?>
                     <div id="home-play-btn"><img src="<?php echo get_template_directory_uri(); ?>/img/play-btn.png" alt="The WildOnes" /></div>
                 </div>
                 <div class="twelve columns home-callout center">
-                    <h3><a href="https://www.adventuresonthegorge.com/" target="_blank">Adventures on the Gorge</a></h3>
+                    <h3><a href="https://www.adventuresonthegorge.com/?nck=8773816530" target="_blank">Adventures on the Gorge</a></h3>
                 </div>
             </div>
         </div>

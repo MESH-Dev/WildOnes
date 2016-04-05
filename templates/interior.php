@@ -299,7 +299,7 @@ get_header(); ?>
           <?php if (get_the_id() != 5 && get_the_id() != $this_id) { 
               $position = 'left';
               if( get_the_id() == 13 || get_the_id() == 11 )
-                $position = 'right';
+               $position = 'right';
           ?>
           
             
