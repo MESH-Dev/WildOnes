@@ -6,17 +6,17 @@
 		<div class="row">
 			<div class="two columns offset-by-two">
 				<div class="logo-container logo-1">
-					<a href="http://www.keenfootwear.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/keen_logo.png" /></a>
+					<a href="http://www.keenfootwear.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/keen_logo.png" width="75"/></a>
 				</div>
 			</div><!-- End of Footer -->
 			<div class="four columns">
 				<div class="logo-container">
-					<a href="https://www.adventuresonthegorge.com/"  target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/aotg_logo.png" /></a>
+					<a href="https://www.adventuresonthegorge.com/"  target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/aotg_logo.png" width="260" /></a>
 				</div>
 			</div>
 			<div class="two columns">
 				<div class="logo-container logo-3">
-					<a href="http://www.waterstoneoutdoors.com/"  target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/waterstonia_logo.png" /></a>
+					<a href="http://www.waterstoneoutdoors.com/"  target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/waterstonia_logo.png" width="50"/></a>
 				</div>
 			</div>
 		</div>
@@ -65,6 +65,7 @@
   ga('send', 'pageview');
 
 </script>
+ 
 
 </body>
 </html>

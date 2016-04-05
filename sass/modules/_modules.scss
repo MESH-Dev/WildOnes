@@ -39,6 +39,7 @@
 
 .vimeo {
   position: absolute;
+  z-index: 100000;
   top: 0;
   left: 0;
   right: 0;
@@ -140,10 +141,12 @@
 }
 
 .carousel-caption{
-	text-align: center;
+  text-align: center;
   display: table-cell;
   vertical-align: middle;
-  padding: 70px 0;
+  padding-top: calc((100vh - 410px)*.715);
+  padding-bottom: calc((100vh - 410px)*.285);
+  
 
 	h4{
 		margin:0;
@@ -160,7 +163,7 @@
 			display: none;
 	    
 	  }
-	    @include mq($tablet-width, 'max-width') {
+	    @include mq('900px', 'max-width') {
 				display: none;
 			}
 		    
@@ -172,7 +175,7 @@
    	 	border-left: none;
    	 	border-right: none;
     	border-bottom: 1px solid $white;
-    	 @include mq($tablet-width, 'max-width') {
+    	 @include mq('900px', 'max-width') {
 				display: none;
 			}
 
@@ -188,7 +191,7 @@
 		font-family: $font-family--secondary;
 		font-size: 32px;
 		letter-spacing: 0.7em;
-		padding: 0 0 15px 15px;
+		padding: 0 0 15px 23px;
 	}
 
 	button {
@@ -236,8 +239,12 @@
 
 }
 
+.caption-interior{
+  	//padding: 24px 0 70px
+  }
+
 .carousel-caption-container {
-  max-width: 600px;
+  max-width: 930px;
   margin: auto;
 
   @include mq($mobile-landscape-width, 'max-width') {
@@ -277,9 +284,11 @@
 	}
 	
 	.prizes {
+		text-transform: uppercase;
 		p{
 			padding: 0;
 			margin: 0;
+			text-transform: uppercase;
 		}
 	}
 
@@ -374,7 +383,7 @@
 
 	.social-text{
 		width: 100%;
-		padding: 40px 0 20px 0;
+		padding: 40px 0 7px 0;
 		font-size: em(12);
 		line-height: em(18);
 		font-weight: 800;
@@ -492,6 +501,7 @@ footer {
     color: #aaaeaf;
     font-size: 13px;
     letter-spacing: 0.15em;
+    margin-bottom: 0;
   }
 }
 
@@ -539,19 +549,26 @@ footer {
 
 .interior-header {
   background-color: black;
+  height: 100px;
   position: fixed;
   top: 0;
   z-index: 10;
   width: 100%;
   display: none;
+  
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
   @include mq($tablet-width, "max-width") {
   	position: absolute;
+  	height: 285px;
+
   }
 }
 
 .interior-header-item {
   text-align: center;
-  padding: 60px 0;
+  padding: 40px 0;
 
   @include mq($tablet-width, 'max-width') {
     padding: 10px 0;
@@ -565,7 +582,11 @@ footer {
 }
 
 .interior-logo {
-  padding: 20px;
+  padding: 15px;
+  img{
+  	max-height: 70px;
+  }
+
 }
 
 .interior-carousel {
@@ -607,8 +628,7 @@ footer {
   .carousel-caption {
     display: block;
     @include mq('950px', "max-width") {
-	    padding: 12
-	    0px 0 70px 0;
+	     
 	  }
     
   }

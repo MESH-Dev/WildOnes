@@ -60,7 +60,7 @@ get_header(); ?>
           <?php
 
           // The Query
-          $the_query = new WP_Query( array( 'post_type' => 'page', 'orderby' => 'title', 'order' => 'ASC' ) );
+          $the_query = new WP_Query( array( 'post_type' => 'page', 'post__not_in' => array( 5 ), 'orderby' => 'menu_order title', 'order' => 'ASC' ) );
 
             // The Loop
             if ( $the_query->have_posts() ) {
@@ -69,7 +69,7 @@ get_header(); ?>
               $the_query->the_post();
               ?>
 
-              <?php if (get_the_id() != 5) { ?>
+               
 
                 <div class="item <?php if( $the_query->current_post == 0 && !is_paged() ) { ?>active<?php } ?>" style="background-image: url('<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_id())); ?>');">
                   <div class="carousel-caption">
@@ -87,7 +87,7 @@ get_header(); ?>
                   </div>
                 </div>
 
-              <?php } ?>
+               
 
               <?php
             }
@@ -160,7 +160,7 @@ get_header(); ?>
             </div>
             
             <div class="row">
-                <div class="eight columns offset-by-two prizes">
+                <div class="ten columns offset-by-one prizes">
                     <p><?php echo get_field('prize_description'); ?></p>
                 </div>
             </div>
@@ -224,7 +224,7 @@ get_header(); ?>
                     </form>
                     
                     <div id="thank-you" class="thanks">
-                       <p>Oh, you <em>are</em> a wild one, aren’t you? Okay, let’s see how this plays out. We’ll announce our grand prize winner via social and email on <span class="black">Tuesday, May 3</span>, so stay tuned.</p>
+                       <p>Oh, you <em>are</em> a wild one, aren’t you? <br/>Okay, let’s see how this plays out. <br/>We’ll announce our grand prize winner via social and email on <span class="black">Tuesday, May 3</span>, so stay tuned.</p>
                     </div>
                     
                     
@@ -236,7 +236,7 @@ get_header(); ?>
             <div class="left">
                  Follow us on <a href="https://www.facebook.com/AdventuresOnTheGorge" target="_blank">facebook</a>, <a href="https://twitter.com/onthegorge" target="_blank">twitter</a>, & <a href="https://www.instagram.com/onthegorge/" target="_blank">instagram</a> for chances to win whitewater rafting adventures, zip line trips and more.
           </div>
-            <div class="right">
+            <div class="right"><br>
                 Read the <a href="http://thewildones.us/wp-content/uploads/2016/03/2016-sweepstakes-rules.pdf" target="_blank">sweepstakes rules.</a>
             </div>
 

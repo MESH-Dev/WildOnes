@@ -40,9 +40,17 @@ jQuery(document).ready(function($){
   $('#bottom-carousel').waitForImages(function() {
      jQuery("#bottom-carousel").smoothDivScroll({
       hotSpotScrolling: false,
+      autoScrollingMode: "always",
+      autoScrollingDirection: "endlessLoopRight",
 			touchScrolling: true
     });
+
+     $("#bottom-carousel").bind("mouseover", function(){
+      $("#bottom-carousel").smoothDivScroll("stopAutoScrolling");
   });
+  });
+
+
   
  
 
@@ -120,8 +128,8 @@ jQuery(document).ready(function($){
           jQuery('.interior-header').addClass('slideInDown');
           jQuery('.interior-header').removeClass('slideOutUp');
         } else {
-          jQuery('.interior-header').removeClass('slideInDown');
-          jQuery('.interior-header').addClass('slideOutUp');
+         // jQuery('.interior-header').removeClass('slideInDown');
+         // jQuery('.interior-header').addClass('slideOutUp');
         }
       });
     }
