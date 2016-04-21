@@ -142,7 +142,7 @@
 
 .carousel-caption{
   text-align: center;
-  display: table-cell;
+  //display: table-cell;
  
   padding-top: calc((100vh - 410px)*.715);
   padding-bottom: calc((100vh - 410px)*.285);
@@ -629,7 +629,7 @@ footer {
   .carousel-caption {
     display: block;
     text-align: center;
-  	display: table-cell;
+  	//display: table-cell;
  	vertical-align: middle;
     padding-top: 150px;
     padding-bottom: 30px;
